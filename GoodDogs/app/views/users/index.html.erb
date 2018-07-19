@@ -3,13 +3,50 @@
   <title>Login and registration</title>
 </head>
 <body>
-    <h1> Login </h1>
-    <form action = "/sessions" method = "POST">
-        <input type = "hidden" name="authenticity_token" value="<%form_authenticity_token%>">
-        <input type = "email" name="login[email]" placeholder = "email">
-        <input type = "password" name="login[password]" placeholder = "password">
-        <input type = "submit" name = "submit" class = "submit">
-    </form>
+    
+    <div class = "login-form-container">
+        <form action = "/sessions" method = "POST" class = "login-form">
+            <span class = "login-form-title"> Login </span>
+            <input type = "hidden" name="authenticity_token" value="<%form_authenticity_token%>">
+
+            <div class = "login-form-input-validate">
+                <span class = "login-form-label"> Username </span>
+                <input type = "email" name="login[email]" placeholder = "Type your email id" class = "login-form-input">
+                <span class = "login-form-focus" data-symbol="&#xf206;"> </span>
+            </div>
+
+            <div class = "login-form-input-validate">
+                <span class = "login-form-label"> Password </span>
+                <input type = "password" name="login[password]" placeholder = "Type your password" class = "login-form-input">
+                <span class = "login-form-focus" data-symbol="&#xf190;"> </span>
+            </div>
+
+            <div class="login-form-forgot-pwd">
+                <a href="#">
+                    Forgot password?
+                </a>
+            </div>  
+
+            <div class="login-form-submit-btn-container">
+                <div class = "login-form-submit-btn-subcontainer">
+                    <div class = "login-form-submit-btn-background"></div>
+                    <input type = "submit" name = "submit" class = "login-form-submit-btn">
+                </div>
+            </div>
+
+            <div class="noaccount-text">
+                <span>
+                    Have no account yet?
+                </span>
+            </div>
+            
+            <div class="signup-container">
+                <a href="#" class="signup-text">
+                    Sign Up
+                </a>
+            </div>
+        </form>
+    </div>
   
     <div class="errors">
         <% if flash[:login_errors]%>
@@ -19,9 +56,9 @@
         <%end%>
     </div>
 
-  <h1> Registration </h1>
   
-    <form action = "/users" method = "POST">
+<!--    <form action = "/users" method = "POST">
+      <span class = "registration-title"> Registration </span>
       <input type = "hidden" name="authenticity_token" value="<%form_authenticity_token%>">
       <input type = "name" name="user[name]" placeholder = "name">
       <input type = "email" name="user[email]" placeholder = "email">
@@ -36,7 +73,7 @@
                 <p> <%=error%> </p>
             <%end%>
         <%end%>
-    </div>
+    </div>  -->
 
 </body>
 </html>

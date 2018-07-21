@@ -26,6 +26,7 @@ $(function() {
         e.preventDefault();
         $('.before-content').addClass('content'); //adding frosted glass effect
         $('.login-form-container').toggle();
+        $('.registration-popup').css("display","block");
     });
     
 });

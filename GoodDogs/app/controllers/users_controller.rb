@@ -10,7 +10,6 @@ class UsersController < ApplicationController
             redirect_to '/dashboard'
         else
             flash[:register_errors] = user.errors.full_messages
-            redirect_to '/'
         end 
     end
 

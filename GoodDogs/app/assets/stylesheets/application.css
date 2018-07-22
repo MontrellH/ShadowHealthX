@@ -14,12 +14,13 @@
  *= require_self
  */
  .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 40;
     width: 100%;
     background-color: rgba(87, 85, 85, 0.30);
-    text-align: center;
+    text-align:center;
+
 }
 
 

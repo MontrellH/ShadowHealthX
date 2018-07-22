@@ -25,7 +25,7 @@ $(function() {
 		$('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
         e.preventDefault();
         $('.before-content').addClass('content'); //adding frosted glass effect
-        $('.login-form-container').toggle();
+        $('.login-form-container').css('visibility', 'hidden');
         $('.registration-popup').css("display","block");
     });
 

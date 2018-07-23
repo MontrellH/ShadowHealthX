@@ -17,7 +17,10 @@
 //= require_tree .
 $(document).ready(function(){
     console.log('Working');
+    
+    
 });
+
 
 $(function() {
 	$('[data-popup-open]').on('click', function(e) {
@@ -51,7 +54,7 @@ $(function() {
     }
 
     var input = $('.login-form-input-validate .login-form-input');
-    $('.login-form').on('submit',function(){    
+    $('.login-form-exclusive').on('submit',function(){    
         var check = true;
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
@@ -59,7 +62,9 @@ $(function() {
                 check=false;
             }
         }
-        $.post('/sessions');
+        if(check == true) {
+            $.post('/sessions');
+        }
         return check;
     });
 
@@ -82,5 +87,4 @@ $(function() {
             }
         }
     }
-    
 });

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
   get '/dashboard' => 'homepage#index'
+  get '/shelter' => 'shelter#index'
 end

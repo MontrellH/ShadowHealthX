@@ -1,3 +1,103 @@
+
 // Place all the styles related to the Homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  //border: 1px solid black;
+}
+
+ol{
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, .8);
+  margin: 0;
+  padding: 0;
+
+  border-radius: 5px;
+
+}
+
+ol li{
+  background-color: rgba(50, 50, 50, .9);
+  font-size: 1.8em;
+  padding: 2%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-family: "Poppins-SemiBold";
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.leaderboard{
+  //transform: scale(1.4);
+
+}
+
+
+.left_hand_side{
+  display: inline;
+  margin-left: 1%;
+  width: 45%;
+  //border-style: dashed;
+  //border: solid 10px black;
+}
+
+
+.right_hand_side{
+  display: inline;
+  float: right;
+  margin-right: 1%;
+  width: 45%;
+}
+
+.scroll_container{
+  display: inline;
+  width: 50%;
+}
+
+.leaderb_list_item{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.leaderb_list_text{
+
+  display: inline-block;
+}
+
+
+
+.homepage_scrolling_image{
+  background-image:   asset-url("loginbackgnd.jpg");
+  width: 90%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.good_dog_btn{
+  font-family: 'Poppins-Medium';
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  width: 70%;
+  height: 100px;
+  background-color: rgba(25, 200, 25, 0.9);
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.scroll_container{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#leaderTitle{
+  text-align: center;
+}

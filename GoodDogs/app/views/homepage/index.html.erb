@@ -4,12 +4,15 @@
 <head>
 </head>
 <body>
+
+<div class="divider"></div>
+
   <div class="left_hand_side">
 
   <div class="scroll_container">
     <img class="homepage_scrolling_image" id="picture_1" ></img>
 
-    <button class="good_dog_btn"> Who's a Good Dog?</button>
+    <button class="good_dog_btn" type="button" onclick="voteDog()"> Who's a Good Dog?</button>
 
     <img class="homepage_scrolling_image" id="picture_2"></img>
 
@@ -32,13 +35,27 @@
     <div class="leaderboard">
       <ol>
         <li id="leaderTitle"> Leaderboard </li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Best Doggo: </a></p><p class="leaderb_list_text">50000</p></li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Also Best Doggo: </a></p><p class="leaderb_list_text">5000</p></li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Another Best Doggo: </a></p><p class="leaderb_list_text">500</p></li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Final Best Doggo: </a></p><p class="leaderb_list_text">50</p></li>
+        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Best Doggo: </a></p><p class="leaderb_list_text" id="dog_1">50000</p></li>
+        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Also Best Doggo: </a></p><p class="leaderb_list_text" id="dog_2">5000</p></li>
+        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Another Best Doggo: </a></p><p class="leaderb_list_text" id="dog_3">500</p></li>
+        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Final Best Doggo: </a></p><p class="leaderb_list_text" id="dog_4">50</p></li>
 
       </ol>
     </div>
   </div>
+
+
+  <script>
+  var count = 0;
+
+  function voteDog(){
+    count++;
+    console.log(count);
+
+    document.getElementById("dog_1").innerHTML = count;
+
+
+  }
+  </script>
 </body>
 </html>

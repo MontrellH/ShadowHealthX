@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ShelterID: 1
+  ShelterName: MyString
+  Address: MyString
+  City: MyString
+
+two:
+  ShelterID: 1
+  ShelterName: MyString
+  Address: MyString
+  City: MyString

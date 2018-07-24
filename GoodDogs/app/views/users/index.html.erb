@@ -11,7 +11,7 @@
 
                 <span class = "login-form-title"> Registration </span>
                 <input type = "hidden" name="authenticity_token" value="<%form_authenticity_token%>">
-
+ 
                 <div class = "signup-form-input-validate">
                     <span class = "login-form-label"> Name </span>
                     <input type = "name" name="user[name]" placeholder = "Type your name/ Type your shelter name" class = "login-form-input">
@@ -35,6 +35,51 @@
                     <input type = "password" name="user[password_confirmation]" placeholder = "Confirm your password" class = "login-form-input">
                     <span class = "login-form-focus" data-symbol="&#xf206;"> </span>
                 </div>
+
+                <div class="signup-form-select-container">
+                    <span class = "login-form-label"> This account is for a </span>
+                    <select class ="signup-form-select">
+                        <div class = "signup-form-select-content">
+                            <option value = "in"> Individual </option>
+                            <option value = "sh"> Shelter </option>
+                            <option value = "po"> Pet owner </option>
+                        </div>
+                    </select>
+                </div>
+
+                <div class = "sh-form">
+                    <div class = "signup-form-input-validate">
+                        <span class = "login-form-label "> Address </span>
+                        <input type = "text" name = "user[addr]" placeholder = "Enter your Address" class="login-form-input login-form-addr" id="gmaps-input-address">
+                    </div>
+
+                    <div id = "gmaps-error"> </div>
+
+                    <div class = "signup-form-input-validate">
+                        <span class = "login-form-label"> City </span>
+                        <input type = "text" name = "user[city]" placeholder = "Enter your Shelter city" class="login-form-input">
+                    </div>
+
+                </div>
+
+                <div class = "po-form">
+                    <div class = "signup-form-input-validate">
+                        <span class = "login-form-label"> City </span>
+                        <input type = "text" name = "user[city]" placeholder = "Enter your Shelter city" class="login-form-input">
+                    </div>
+
+                    <div class="signup-form-select-container">
+                        <span class = "login-form-label"> Choose a Shelter</span>
+                        <select class ="signup-form-select-shelter">
+                            <div class = "signup-form-select-shelter-content">
+                                <option value = "sh"> Shelter1 </option>
+                                <option value = "po"> Shelter2 </option>
+                                <option value = "in"> Shelter3 </option>
+                            </div>
+                        </select>
+                    </div>
+                </div>
+
 
                 <div class="signup-form-submit-btn-container">
                     <div class = "signup-form-submit-btn-subcontainer">

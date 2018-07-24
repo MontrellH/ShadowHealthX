@@ -10,12 +10,12 @@
     font-family: Poppins-Regular;
     src: asset-url('fonts/Poppins-Regular.ttf') format('truetype');
 }
-  
+
 @font-face {
     font-family: Poppins-Medium;
     src: asset-url('fonts/Poppins-Medium.ttf') format('truetype');
 }
-  
+
 @font-face {
     font-family: Poppins-SemiBold;
     src: asset-url('fonts/Poppins-SemiBold.ttf') format('truetype');
@@ -26,7 +26,7 @@
     src: asset-url('fonts/FontAwesome.otf') format('truetype');
 }
 
-body 
+body
 {
   background: {
     image: asset-url("loginbackgnd3.jpg");
@@ -43,7 +43,7 @@ body
     height: 19.8%; width: 19.8%;
     background: url(https://images.pexels.com/photos/69372/pexels-photo-69372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
-    z-index: -1; 
+    z-index: -1;
     transform: scale(5);
     transform-origin: top left;
     filter: blur(2px);
@@ -51,17 +51,17 @@ body
 
 
 input:focus {
-    outline: none; 
+    outline: none;
 }
 
 .login-form-container {
     padding: 50px 50px 50px 50px;
-    width: 500px; 
-    margin-left: 65%;
-    margin-top:13%; 
+    width: 500px;
+    margin-left: 60%;
+    margin-top:13%;
     margin-bottom: 10%;
-    padding: 20px; 
-    background-color: rgba(0, 0, 0, 0.23); 
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.23);
     border-radius: 40px;
 }
 
@@ -108,7 +108,7 @@ input:focus {
     background: transparent;
     padding-left : 5px;
  }
- 
+
 
  .login-form-forgot-pwd {
      padding-top: 8px;
@@ -146,13 +146,13 @@ input:focus {
     overflow: hidden;
     margin: 0 auto;
   }
-  
+
   .login-form-submit-btn {
     font-family: 'Poppins-Medium';
     font-size: 16px;
     color: #ffffff;
     line-height: 1.2;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -207,7 +207,7 @@ input:focus {
 	position:fixed;
 	top:0px;
 	left:0px;
-    background-color: rgba(0, 0, 0, 0.23); 
+    background-color: rgba(0, 0, 0, 0.23);
     border-radius: 40px;
     display: none;
 }
@@ -221,7 +221,7 @@ input:focus {
 	left:50%;
 	-webkit-transform:translate(-50%, -50%);
 	transform:translate(-50%, -50%);
-	background-color: rgba(0, 0, 0, 0.23); 
+	background-color: rgba(0, 0, 0, 0.23);
     border-radius: 40px;
 }
 
@@ -230,7 +230,7 @@ input:focus {
     font-size: 16px;
     color: #ffffff;
     line-height: 1.2;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -286,23 +286,23 @@ input:focus {
     transform: translateY(50%);
     right: 2px;
     pointer-events: none;
-  
+
     font-family: Poppins-Regular;
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
     text-align: left;
-  
+
     visibility: hidden;
     opacity: 0;
-  
+
     -webkit-transition: opacity 0.4s;
     -o-transition: opacity 0.4s;
     -moz-transition: opacity 0.4s;
     transition: opacity 0.4s;
     margin-right:60px;
   }
-  
+
   .alert-validate::after {
     content: "\f06a";
     font-family: FontAwesome;
@@ -319,12 +319,12 @@ input:focus {
     right: 8px;
     margin-right:65px;
   }
-  
+
   .alert-validate:hover:before {
     visibility: visible;
     opacity: 1;
   }
-  
+
   @media (max-width: 992px) {
     .alert-validate::before {
       visibility: visible;
@@ -339,7 +339,3 @@ input:focus {
     margin-bottom: 5%;
     margin-left : 5%
  }
-
-
-
-

@@ -1,4 +1,4 @@
-class ShelterController < ApplicationController
+class SheltersController < ApplicationController
   def index
     @all_shelters = Shelter.all
   end

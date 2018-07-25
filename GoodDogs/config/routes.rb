@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
   get '/dashboard' => 'homepage#index'
-  get '/shelter' => 'shelter#index'
-  resources :dogs
+  resources :shelters, only: [:show, :index]
+  resources :dogs 
 end

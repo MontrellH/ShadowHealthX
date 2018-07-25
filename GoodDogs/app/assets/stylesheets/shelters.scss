@@ -6,3 +6,15 @@
   height: 500px;
   width: 100%;
 }
+
+#caro1{
+  background-image:   asset-url("loginbackgnd.jpg");
+  width: 90%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.table.table-hover{
+  background-color: rgba(200, 200, 200, .7);
+}

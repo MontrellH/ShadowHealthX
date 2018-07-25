@@ -5,9 +5,7 @@
 <body>
 
 <div class="container">
-  <p> This will be our list of shelters </p>
-  <p> We should be able to fill it progmatically </p>
-  <p> For now it's hardcoded placeholder </p>
+  <p> This is our list of shelters </p>
 
   <table class="table table-hover">
     <thead>
@@ -38,7 +36,7 @@
         <td> Bainesville </td>
         <td><a href=#> gaagle.com/PPRUS</a></td>
       </tr>
-      <tr>
+      <tr id="lastRow">
         <td> Pet Friends r Us </td>
         <td> Bainesville </td>
         <td><a href=#> gaagle.com/PFRUS</a></td>
@@ -48,7 +46,44 @@
 </div>
 
 
+
 <p> Divider </p>
 <div id='map' data-shelters="<%= @all_shelters.to_json%>"></div>
 
+<script>
+addSheltRow();
+
+function addSheltRow(){
+  var sheltName = $("<td></td>").text("TestName");
+  var sheltLoc = $("<td></td>").text("TestLocation");
+  var sheltLink = $("<td></td>").text("TestLink");
+  var nRow;
+
+/*
+  var row = $("<tr></tr>").append(sheltName, sheltLoc, sheltLink);
+  nRow = row;
+  $("#lastRow").after(nRow);
+  (nRow).after(row);
+  */
+
+for(var count = 10; count > 0; count--){
+  var name2 = document.createElement("td");
+  var loc2 = document.createElement("td");
+  var link2 = document.createElement("td");
+
+  name2.innerHTML = "Name " + count;
+  loc2.innerHTML = "Loc " + count;
+  link2.innerHTML = "Link " + count;
+
+  var row2 = document.createElement("tr");
+  row2.append(name2, loc2, link2);
+
+  $("#lastRow").after(row2);
+}
+
+
+}
+
+
+</script>
 </body>

@@ -15,10 +15,19 @@
 
 /* Logo */
 
-.header-login-signup .header-limiter img{
+/* .header-login-signup .header-limiter img{
 	float: left;
 	margin: 0px;
+} */
+
+.header_image{
+	background-image:   asset-url("logo.png");
+	width: 10%;
+	height: 60px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+
 
 /* The navigation links */
 

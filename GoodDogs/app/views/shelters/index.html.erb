@@ -1,2 +1,54 @@
-<h1>List of Dogs</h1>
+<h1>List of Shelters</h1>
+
+
+
+<body>
+
+<div class="container">
+  <p> This will be our list of shelters </p>
+  <p> We should be able to fill it progmatically </p>
+  <p> For now it's hardcoded placeholder </p>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+      <th> Shelter Name</th>
+      <th> Shelter Location </th>
+      <th> Shelter Link </th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> Pet Friends r Us </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/PFRUS</a></td>
+      </tr>
+      <tr>
+        <td> Not a Hoarder </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/NaH</a></td>
+      </tr>
+      <tr>
+        <td> DoggoLand </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/dGl</a></td>
+      </tr>
+      <tr>
+        <td> PuppersnPictures </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/PPRUS</a></td>
+      </tr>
+      <tr>
+        <td> Pet Friends r Us </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/PFRUS</a></td>
+      </tr>
+    </tbdoy>
+  </table>
+</div>
+
+
+<p> Divider </p>
 <div id='map' data-shelters="<%= @all_shelters.to_json%>"></div>
+
+</body>

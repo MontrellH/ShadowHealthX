@@ -20,7 +20,9 @@ class SheltersController < ApplicationController
       def shelter_params
         params.require(:shelter).permit(:id, :name, :address, :city)
       end
-  # def show
-  #   @shelter = Shelter.find(params[:id])
-  # end
+
+   def show
+     @shelter = Shelter.find(params[:id])
+   end
+   
 end

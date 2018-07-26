@@ -1,0 +1,89 @@
+<h1>List of Shelters</h1>
+
+
+
+<body>
+
+<div class="container">
+  <p> This is our list of shelters </p>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+      <th> Shelter Name</th>
+      <th> Shelter Location </th>
+      <th> Shelter Link </th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> Pet Friends r Us </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/PFRUS</a></td>
+      </tr>
+      <tr>
+        <td> Not a Hoarder </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/NaH</a></td>
+      </tr>
+      <tr>
+        <td> DoggoLand </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/dGl</a></td>
+      </tr>
+      <tr>
+        <td> PuppersnPictures </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/PPRUS</a></td>
+      </tr>
+      <tr id="lastRow">
+        <td> Pet Friends r Us </td>
+        <td> Bainesville </td>
+        <td><a href=#> gaagle.com/PFRUS</a></td>
+      </tr>
+    </tbdoy>
+  </table>
+</div>
+
+
+
+<p> Divider </p>
+<div id='map' data-shelters="<%= @all_shelters.to_json%>"></div>
+
+<script>
+addSheltRow();
+
+function addSheltRow(){
+  var sheltName = $("<td></td>").text("TestName");
+  var sheltLoc = $("<td></td>").text("TestLocation");
+  var sheltLink = $("<td></td>").text("TestLink");
+  var nRow;
+
+/*
+  var row = $("<tr></tr>").append(sheltName, sheltLoc, sheltLink);
+  nRow = row;
+  $("#lastRow").after(nRow);
+  (nRow).after(row);
+  */
+
+for(var count = 10; count > 0; count--){
+  var name2 = document.createElement("td");
+  var loc2 = document.createElement("td");
+  var link2 = document.createElement("td");
+
+  name2.innerHTML = "Name " + count;
+  loc2.innerHTML = "Loc " + count;
+  link2.innerHTML = "Link " + count;
+
+  var row2 = document.createElement("tr");
+  row2.append(name2, loc2, link2);
+
+  $("#lastRow").after(row2);
+}
+
+
+}
+
+
+</script>
+</body>

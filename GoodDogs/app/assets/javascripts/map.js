@@ -1,7 +1,7 @@
 var map;
 function initMap(){
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 29.6175842, lng: -82.3804339},
+    center: {lat: 29.64335, lng: -82.3357407},
     zoom: 14
   });
 }
@@ -10,11 +10,18 @@ $( document ).ready(function() {
   var shelters = $('#map').data('shelters');
   var curr_shelter = $('#map').data('shelter');
   var index;
-  for (index = 0; index < shelters.length; index++) {
-    var shelter = shelters[index]
-    var position = {lat: 29.6175842, lng: -82.3804339};
-
-    var marker = new google.maps.Marker({title: shelter.Name, position: position, map: map});
+  if(curr_shelter == null) {
+    for (index = 0; index < shelters.length; index++) {
+      var shelter = shelters[index]
+      var position = {lat: parseFloat(shelter.Lat), lng: parseFloat(shelter.Lng)};
+  
+      var marker = new google.maps.Marker({title: shelter.Name, position: position, map: map});
+    }
+  }
+  else {
+    var pos = {lat: parseFloat(curr_shelter.Lat), lng: parseFloat(curr_shelter.Lng)};
+    var marker = new google.maps.Marker({title: curr_shelter.Name, position: pos, map: map});
   }
 });
+
 

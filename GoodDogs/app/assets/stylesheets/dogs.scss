@@ -1,3 +1,48 @@
-// Place all the styles related to the Dogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.My_Dog_Container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=string], input[type=integer] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=string]:focus, input[type=integer]:focus  {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+::placeholder{
+  color: black;
+  opacity: 0.5;
+}
+
+/* Set a style for the submit/register button */
+.submitbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.submitbtn:hover {
+  opacity:1;
+}

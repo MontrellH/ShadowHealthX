@@ -1,0 +1,41 @@
+<%= form_with(model: @dog, local: true) do |form| %>
+
+  <% if @dog.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@dog.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @dog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :breed %><br>
+    <%= form.text_field :breed %>
+  </p>
+
+  <p>
+    <%= form.label :age %><br>
+    <%= form.text_field :age %>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

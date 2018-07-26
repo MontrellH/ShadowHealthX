@@ -7,6 +7,12 @@ class SheltersController < ApplicationController
     @shelter = Shelter.new
   end
 
+  def destroy
+    @shelter = Shelter.find(params[:id])
+    @shelter.destroy
+    redirect_to '/shelters'
+  end
+
   def edit
     @shelter = Shelter.find(params[:id])
   end
@@ -22,9 +28,10 @@ class SheltersController < ApplicationController
 
 
    def show
-     
      @shelter = Shelter.find(params[:id])
    end
+
+
 
    private
     def shelter_params

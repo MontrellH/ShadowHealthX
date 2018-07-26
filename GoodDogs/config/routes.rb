@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/' => 'users#index'
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
+  post '/shelters' => 'shelters#create'
   get '/dashboard' => 'homepage#index'
   resources :shelters, only: [:show, :index]
   resources :dogs

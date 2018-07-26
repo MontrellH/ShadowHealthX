@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_175303) do
+
+ActiveRecord::Schema.define(version: 2018_07_26_154126) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
@@ -30,11 +31,11 @@ ActiveRecord::Schema.define(version: 2018_07_25_175303) do
   end
 
   create_table "shelters", force: :cascade do |t|
-    t.string "Address"
-    t.string "City"
+    t.string "address"
+    t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "Name"
+    t.string "name"
     t.decimal "Lng"
     t.decimal "Lat"
   end

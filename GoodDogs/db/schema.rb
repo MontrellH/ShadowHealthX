@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2018_07_26_154126) do
 
   create_table "dogs", force: :cascade do |t|

@@ -5,18 +5,19 @@
     <link rel="stylesheet" href="assets/dogs.scss">
 </head>
 
-<h1>Dogs List</h1>
-<%= link_to 'New Dog', new_dog_path %>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Breed</th>
-    <th>Age</th>
-    <th>Description</th>
-    <th></th>
+<h1><b>Dogs List<b></h1>
+<button type="button" class="btn btn-primary"><%= link_to 'New Dog', new_dog_path %></button>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name<span class="glyphicons glyphicons-dog"></span></th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Description</th>
   </tr>
-
-  <% @dogs.each do |dog| %>
+  </thead>
+  <tbody>
+    <% @dogs.each do |dog|%>
     <tr>
       <td><%= dog.name %></td>
       <td><%= dog.breed %></td>
@@ -26,8 +27,9 @@
       <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
       <td><%= link_to 'Delete',
                  dog_path(dog),
-                             method: :delete,
-                             data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+    <% end %>
+  </tbdoy>
 </table>

@@ -68,6 +68,7 @@
 
                     <div class="signup-form-select-container signup-form-shelter-container">
                         <span class = "login-form-label"> Choose a Shelter</span>
+                        <%= select_tag "shelter_id", options_from_collection_for_select(@shelters_by_city, "id", "Name") %>
                     </div>
 
                 </div> 

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
   post '/shelters' => 'shelters#create'
   get '/dashboard' => 'homepage#index'
-  resources :shelters, only: [:show, :index]
+  resources :shelters
   resources :dogs
 end

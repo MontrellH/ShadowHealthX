@@ -1,32 +1,20 @@
-<h1>List of Shelters</h1>
 
 
+<h1 id="shelterTitle">List of Shelters</h1>
 
 
 <body>
 
+<%= link_to 'new', new_shelter_path, {class: "btn btn-info"} %>
+
+
 <div class="container">
+
+
+
+
   <p> This is our list of shelters </p>
 
-  <%= form_for Shelter.new do |f| %>
-
-  <%= f.label :name, "Please enter shelter name" %>
-  <%= f.text_field :name %> <br>
-  <%= f.label :address, "Please enter the address" %>
-  <%= f.text_area :address %> <br>
-  <%= f.label :city, "Please enter the city"%>
-  <%= f.text_field :city %>
-  <%= f.submit "Make Shelter" %>
-
-
-
-  <%end%>
-
-  <div class="container">
-
-  </div>
-
-  <p> Ignore the table for now </p>
 
   <table class="table table-hover">
     <thead>
@@ -42,32 +30,18 @@
       <td><%= shelter.name%></td>
       <td><%= shelter.address%></td>
       <td><%= shelter.city%></td>
+      <td><%= link_to 'show', shelter_path(shelter)%></td>
+      <td><%= link_to 'edit', edit_shelter_path(shelter)%></td>
+      <td><%= link_to 'delete',
+            shelter_path(shelter),
+                            method: :delete,
+                            data: {confirm: 'Are you sure?'}%> </td>
     </tr>
       <% end %>
-      <tr>
-        <td> Pet Friends r Us </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/PFRUS</a></td>
-      </tr>
-      <tr>
-        <td> Not a Hoarder </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/NaH</a></td>
-      </tr>
-      <tr>
-        <td> DoggoLand </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/dGl</a></td>
-      </tr>
-      <tr>
-        <td> PuppersnPictures </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/PPRUS</a></td>
-      </tr>
       <tr id="lastRow">
-        <td> Pet Friends r Us </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/PFRUS</a></td>
+        <td> Placeholder </td>
+        <td> Placeholder </td>
+        <td><a href=#> placeholder.com</a></td>
       </tr>
     </tbdoy>
   </table>

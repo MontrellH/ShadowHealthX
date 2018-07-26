@@ -1,0 +1,15 @@
+<h1> New Shelter </h1>
+
+<%= form_for Shelter.new do |f| %>
+
+<%= f.label :name, "Please enter shelter name" %>
+<%= f.text_field :name %> <br>
+<%= f.label :address, "Please enter the address" %>
+<%= f.text_area :address %> <br>
+<%= f.label :city, "Please enter the city"%>
+<%= f.text_field :city %>
+<%= f.submit "Make Shelter" %>
+
+
+
+<%end%>

@@ -7,6 +7,10 @@ class SheltersController < ApplicationController
     @shelter = Shelter.new
   end
 
+  def edit
+    @shelter = Shelter.find(params[:id])
+  end
+
   def create
     @shelter = Shelter.new(shelter_params)
       if @shelter.save
@@ -16,13 +20,15 @@ class SheltersController < ApplicationController
       end
     end
 
-    private
-      def shelter_params
-        params.require(:shelter).permit(:id, :name, :address, :city)
-      end
 
    def show
+     
      @shelter = Shelter.find(params[:id])
    end
-   
+
+   private
+    def shelter_params
+       params.require(:shelter).permit(:id, :name, :address, :city)
+    end
+
 end

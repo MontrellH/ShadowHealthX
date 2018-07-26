@@ -6,6 +6,7 @@
 
 <%= link_to 'new', new_shelter_path %>
 
+
 <div class="container">
   <p> This is our list of shelters </p>
 
@@ -43,32 +44,14 @@
       <td><%= shelter.name%></td>
       <td><%= shelter.address%></td>
       <td><%= shelter.city%></td>
+      <td><%= link_to 'show', shelter_path(shelter)%></td>
+      <td><%= link_to 'edit', edit_shelter_path(shelter)%></td>
     </tr>
       <% end %>
-      <tr>
-        <td> Pet Friends r Us </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/PFRUS</a></td>
-      </tr>
-      <tr>
-        <td> Not a Hoarder </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/NaH</a></td>
-      </tr>
-      <tr>
-        <td> DoggoLand </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/dGl</a></td>
-      </tr>
-      <tr>
-        <td> PuppersnPictures </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/PPRUS</a></td>
-      </tr>
       <tr id="lastRow">
-        <td> Pet Friends r Us </td>
-        <td> Bainesville </td>
-        <td><a href=#> gaagle.com/PFRUS</a></td>
+        <td> Placeholder </td>
+        <td> Placeholder </td>
+        <td><a href=#> placeholder.com</a></td>
       </tr>
     </tbdoy>
   </table>

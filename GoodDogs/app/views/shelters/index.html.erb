@@ -2,6 +2,7 @@
 
 <h1 id="shelterTitle">List of Shelters</h1>
 
+
 <body>
 
 <%= link_to 'new', new_shelter_path, {class: "btn btn-info"} %>
@@ -49,6 +50,7 @@
 
 
 <p> Divider </p>
+
 <div id='map' data-shelters="<%= @all_shelters.to_json%>"></div>
 
 <script>

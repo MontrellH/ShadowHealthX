@@ -11,8 +11,6 @@
 <div class="container">
 
 
-
-
   <p> This is our list of shelters </p>
 
 
@@ -21,7 +19,9 @@
       <tr>
       <th> Shelter Name</th>
       <th> Shelter Location </th>
-      <th> Shelter Link </th>
+      <th> Shelter City </th>
+      <th> Shelter Latitude</th>
+      <th> Shelter Longitude</th>
     </tr>
     </thead>
     <tbody>
@@ -30,6 +30,8 @@
       <td><%= shelter.name%></td>
       <td><%= shelter.address%></td>
       <td><%= shelter.city%></td>
+      <td><%= shelter.lat %></td>
+      <td><%= shelter.lng %></td>
       <td><%= link_to 'show', shelter_path(shelter)%></td>
       <td><%= link_to 'edit', edit_shelter_path(shelter)%></td>
       <td><%= link_to 'delete',
@@ -38,11 +40,11 @@
                             data: {confirm: 'Are you sure?'}%> </td>
     </tr>
       <% end %>
-      <tr id="lastRow">
+      <!-- <tr id="lastRow">
         <td> Placeholder </td>
         <td> Placeholder </td>
         <td><a href=#> placeholder.com</a></td>
-      </tr>
+      </tr> -->
     </tbdoy>
   </table>
 </div>
@@ -51,9 +53,35 @@
 
 
 
-<div id='map' data-shelters="<%= @all_shelters.to_json%>"></div>
-
+<div id='map' data-shelters="<%= @shelters.to_json%>"></div>
 <script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 29.6500853, lng: -82.3235237},
+      zoom: 17
+    });
+  }
+
+  $(document).ready(
+    function(){
+      var shelters = $("#map").data("shelters");
+
+
+      for(var index = 0; index < shelters.length; index++)
+      {
+        var shelter = shelters[index];
+        var position = { lat: parseFloat(shelter.lat), lng: parseFloat(shelter.lng)} ;
+
+        var marker = new google.maps.Marker({title: shelter.name, position: position, map: map});
+
+
+      }
+    }
+  );
+</script>
+
+<!-- <script>
 addSheltRow();
 
 function addSheltRow(){
@@ -88,5 +116,5 @@ for(var count = 10; count > 0; count--){
 }
 
 
-</script>
+</script> -->
 </body>

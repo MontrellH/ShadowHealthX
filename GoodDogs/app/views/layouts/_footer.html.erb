@@ -21,11 +21,18 @@
         <div class="footer-left">
 
           <p class="footer-links">
-            <a href="dashboard">Home</a>
-            ·
-            <a href="shelters">Shelter</a>
-            ·
-            <a href="dogs">Dogs</a>
+            <%= link_to homepage_index_path do %>
+      				<i class="fa fa-home" style="color:black"></i>
+      				Home
+      			<% end %>
+      			<%= link_to shelters_path do %>
+      				<i class="fa fa-building" style="color:black"></i>
+      				Shelters
+      			<% end %>
+      			<%= link_to dogs_path do %>
+      				<i class="fa fa-paw" style="color:black"></i>
+      				Dogs
+      			<% end %>
           </p>
           <p class="footer-company-name">Good Dogs &copy; 2018</p>
 
@@ -44,8 +51,8 @@
           </div>
 
           <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">support@company.com</a></p>
+            <i class="fa fa-info"></i>
+            <p><%= link_to "Support", "https://github.com/MontrellH/ShadowHealthX", :target => "_blank" %></p>
           </div>
 
         </div>

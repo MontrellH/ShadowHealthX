@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
     skip_before_action :verify_authenticity_token
-    def create 
+    def create
         user = User.find_by(email:login_params[:email])
         if user && user.authenticate(login_params[:password])
             session[:user_id] = user.id
-            redirect_to '/dashboard'
+            redirect_to '/homepage'
         else
             flash[:login_errors] = ['invalid credentials']
             redirect_to '/'

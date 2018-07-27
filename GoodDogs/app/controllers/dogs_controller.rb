@@ -1,5 +1,5 @@
 class DogsController < ApplicationController
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: 'user', password: 'pass', except: [:index, :show]
 
   def index
     @dogs = Dog.all

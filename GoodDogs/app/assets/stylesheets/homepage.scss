@@ -6,6 +6,10 @@
   //border: 1px solid black;
 }
 
+li p{
+  color:white;
+}
+
 ol{
   list-style-type: none;
   background-color: rgba(0, 0, 0, .8);
@@ -26,6 +30,7 @@ ol li{
   font-family: "Poppins-SemiBold";
   display: flex;
   justify-content: space-between;
+  color: white;
 
 }
 

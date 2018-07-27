@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  
+
 
 <div class="divider"></div>
 
@@ -36,13 +36,14 @@
   </div>
 
   <div class="right_hand_side">
+
+
     <div class="leaderboard">
       <ol>
         <li id="leaderTitle"> Leaderboard </li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Best Doggo: </a></p><p class="leaderb_list_text" id="dog_1">50000</p></li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Also Best Doggo: </a></p><p class="leaderb_list_text" id="dog_2">5000</p></li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Another Best Doggo: </a></p><p class="leaderb_list_text" id="dog_3">500</p></li>
-        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"> Final Best Doggo: </a></p><p class="leaderb_list_text" id="dog_4">50</p></li>
+        <% @dogs.each do |dog| %>
+        <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"><%= dog.name%></a></p><p class="leaderb_list_text" id="dog_1">50000</p></li>
+        <% end %>
 
       </ol>
     </div>

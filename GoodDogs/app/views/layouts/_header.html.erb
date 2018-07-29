@@ -9,7 +9,6 @@
 
 	<title>Header</title>
 
-	<link rel="stylesheet" href="assets/header.css">
 
 </head>
 
@@ -17,17 +16,28 @@
 
 	<div class="header-limiter">
 
-		<!-- <a href="dashboard"><img class="homepage_image"></img></a> -->
-
 		<nav>
-			<a href="dashboard"><i class="fa fa-home" style="color:black"> </i>Home</a>
-			<a href="shelters"><i class="fa fa-building" style="color:black"> </i>Shelters</a>
-			<a href="dogs"><i class="fa fa-paw" style="color:black"> </i>Dogs</a>
+			<%= link_to homepage_index_path do %>
+				<i class="fa fa-home" style="color:black"></i>
+				Home
+			<% end %>
+			<%= link_to shelters_path do %>
+				<i class="fa fa-building" style="color:black"></i>
+				Shelters
+			<% end %>
+			<%= link_to dogs_path do %>
+				<i class="fa fa-paw" style="color:black"></i>
+				Dogs
+			<% end %>
 		</nav>
 
 		<ul>
-			<li><a href="/">Login</a></li>
-			<li><a href="#">Sign up</a></li>
+			<li><%= link_to users_path do %>
+				Login
+			<% end %></li>
+			<li><%= link_to users_path do %>
+				Sign up
+			<% end %></li>
 		</ul>
 
 	</div>

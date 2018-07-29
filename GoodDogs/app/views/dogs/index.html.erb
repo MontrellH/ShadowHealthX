@@ -1,2 +1,38 @@
-<h1>Dogs#index</h1>
-<p>Find me in app/views/dogs/index.html.erb</p>
+<!DOCTYPE html>
+<head>
+    <title>My Dog Profile</title>
+
+    <link rel="stylesheet" href="assets/dogs.scss">
+</head>
+
+<h1><b>Dogs List<b></h1>
+<button type="button" class="btn btn-primary"><%= link_to 'New Dog', new_dog_path %></button>
+
+<div class = "container">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name<span class="glyphicons glyphicons-dog"></span></th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @dogs.each do |dog|%>
+    <tr>
+      <td><%= dog.name %></td>
+      <td><%= dog.breed %></td>
+      <td><%= dog.age %></td>
+      <td><%= dog.description %></td>
+      <td><%= link_to 'Show', dog_path(dog) %></td>
+      <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
+      <td><%= link_to 'Delete',
+                 dog_path(dog),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+    <% end %>
+  </tbdoy>
+</table>
+</div>

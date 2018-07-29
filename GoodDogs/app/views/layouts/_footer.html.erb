@@ -3,15 +3,14 @@
 
     <head>
 
-      <!-- <meta charset="utf-8">
+      <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="keywords" content="footer, address, phone, icons" /> -->
+      <meta name="keywords" content="footer, address, phone, icons" />
 
       <title>Footer</title>
 
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="css/footer.css">
 
     </head>
 
@@ -22,11 +21,18 @@
         <div class="footer-left">
 
           <p class="footer-links">
-            <a href="dashboard">Home</a>
-            ·
-            <a href="shelter">Shelter</a>
-            ·
-            <a href="#">Dogs</a>
+            <%= link_to homepage_index_path do %>
+      				<i class="fa fa-home" style="color:black"></i>
+      				Home
+      			<% end %>
+      			<%= link_to shelters_path do %>
+      				<i class="fa fa-building" style="color:black"></i>
+      				Shelters
+      			<% end %>
+      			<%= link_to dogs_path do %>
+      				<i class="fa fa-paw" style="color:black"></i>
+      				Dogs
+      			<% end %>
           </p>
           <p class="footer-company-name">Good Dogs &copy; 2018</p>
 
@@ -45,8 +51,8 @@
           </div>
 
           <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">support@company.com</a></p>
+            <i class="fa fa-info"></i>
+            <p><%= link_to "Support", "https://github.com/MontrellH/ShadowHealthX", :target => "_blank" %></p>
           </div>
 
         </div>

@@ -14,7 +14,7 @@ function initMap(){
 //     for (index = 0; index < shelters.length; index++) {
 //       var shelter = shelters[index]
 //       var position = {lat: parseFloat(shelter.Lat), lng: parseFloat(shelter.Lng)};
-  
+//
 //       var marker = new google.maps.Marker({title: shelter.Name, position: position, map: map});
 //     }
 //   }
@@ -23,5 +23,3 @@ function initMap(){
 //     var marker = new google.maps.Marker({title: curr_shelter.Name, position: pos, map: map});
 //   }
 // });
-
-

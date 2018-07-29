@@ -7,12 +7,23 @@
   width: 100%;
 }
 
-#caro1{
-  background-image:   asset-url("loginbackgnd.jpg");
-  width: 90%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
+#shelterTitle{
+  align-content: center;
+  //border: 5px solid black;
+  text-align: center;
+
+}
+
+.square{
+  display: block;
+  border: 5px solid black;
+}
+
+.btn.btn-info{
+  //border: 5px solid black;
+  display: block;
+  margin: 0% 30%;
+
 }
 
 .table.table-hover{

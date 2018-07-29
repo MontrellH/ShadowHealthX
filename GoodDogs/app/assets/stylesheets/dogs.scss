@@ -1,3 +1,47 @@
-// Place all the styles related to the Dogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Add padding to containers */
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=string], input[type=integer], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  color: black;
+}
+
+input[type=text]:focus, input[type=string]:focus, input[type=integer]:focus, textarea:focus  {
+  background-color: #ddd;
+  outline: none;
+  color:black;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+::placeholder{
+  color: black;
+  opacity: 0.5;
+}
+
+a{
+  color: white;
+}
+
+h1{
+  align-content: center;
+    text-align: center
+}
+
+.btn btn-primary{
+  align-content: center;
+}

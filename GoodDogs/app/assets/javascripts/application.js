@@ -87,4 +87,41 @@ $(function() {
             }
         }
     }
+
+    $('.signup-form-select').on('click',function(){
+        var selectedOption = $(this).val();
+        if(selectedOption == "sh") {
+            $('.po-form').css('display','none');
+            $('.sh-form').css('display','block');
+        } else if(selectedOption == "po") {
+            $('.sh-form').css('display','none');
+            $('.po-form').css('display','block');
+        } else if(selectedOption == "in") {
+            $('.sh-form').css('display','none');
+            $('.po-form').css('display','none');
+        }
+    });
+
+    $('.signup-form-shelter-city').on('focusout',function(){
+        var cityname = $(this).val();
+        $.ajax({
+            type: "get",
+            url: "/shelter_manipulations",
+            data: { 
+                city: cityname
+            },
+            success:function(data) {
+                console.log(data);
+                var i;
+                var $select = $("#shelter_id");
+                console.log($select);
+                $.each(data, function(i, el) {
+                    console.log(el);
+                    $select.append($("<option />", { text: el.Name }));
+                });
+            }
+          });
+        $('.signup-form-shelter-container').css('display','block');
+    });
+
 });

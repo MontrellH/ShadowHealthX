@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/dashboard' => 'homepage#index'
   resources :shelters, only: [:show, :index]
   resources :dogs 
+  resources :shelter_manipulations, only: [:index]
 end

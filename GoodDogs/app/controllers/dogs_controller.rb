@@ -1,5 +1,7 @@
 class DogsController < ApplicationController
-  http_basic_authenticate_with name: 'user', password: 'pass', except: [:index, :show]
+  before_action :authenticate_user!, except: [:new, :show, :index, :create]
+  before_action :set_dog, except: [:create, :new, :index]
+  before_action :authorize!, except: [:new, :create, :show, :index]
 
   def index
     @dogs = Dog.all
@@ -10,11 +12,11 @@ class DogsController < ApplicationController
   end
 
   def show
-    @dog = Dog.find(params[:id])
+
   end
 
   def edit
-    @dog = Dog.find(params[:id])
+
   end
 
   def create
@@ -29,7 +31,7 @@ class DogsController < ApplicationController
   end
 
   def update
-    @dog = Dog.find(params[:id])
+
 
     if @dog.update(dog_params)
       redirect_to @dog
@@ -39,14 +41,25 @@ class DogsController < ApplicationController
   end
 
   def destroy
-    @dog = Dog.find(params[:id])
+
     @dog.destroy
 
     redirect_to '/dogs'
   end
 
-    private
-      def dog_params
+  private
+  def set_dog
+            @dog = Dog.find(params[:id])
+  end
+
+  def authorize!
+      unless @dog.user == current_user
+        redirect_to users_path, alert: 'You are not authorized.' and return
+      end
+  end
+
+  def dog_params
         params.require(:dog).permit(:name, :breed, :description, :age)
-    end
+  end
+
 end

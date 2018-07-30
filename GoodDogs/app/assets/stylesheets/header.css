@@ -85,9 +85,11 @@
 
 .header-login-signup .header-limiter ul li:last-child a {
 	font-weight: bold;
-	background-color: #3a3c3e;
+	background-color: rgba(239, 25, 25,0.7);
 	padding: 10px 15px;
 	border-radius: 3px;
+	font-family: 'Poppins-Medium';
+	border-radius : 25px;
 }
 
 /* Making the header responsive */

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def index
-      
+
     end
 
     def create
@@ -21,12 +21,12 @@ class UsersController < ApplicationController
                 params[:user][:shelter_id] = shelter.id
                 user_create
             else
-                flash[:register_errors] = shelter.errors.full_messages 
+                flash[:register_errors] = shelter.errors.full_messages
             end
         end
     end
 
-    def user_create 
+    def user_create
         user = User.new(user_params)
         if user.save
             session[:user_id] = user.id

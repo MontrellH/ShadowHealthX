@@ -43,10 +43,7 @@ body
     height: 19.8%; width: 19.8%;
     background: url(https://images.pexels.com/photos/69372/pexels-photo-69372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-size: cover;
-
-
     background-repeat: no-repeat;
-    
     z-index: -1;
     transform: scale(5);
     transform-origin: top left;
@@ -91,6 +88,14 @@ input:focus {
     margin-left : 5%
  }
 
+ .signup-form-input-validate {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px rgba(0,0,0,0.3);
+    margin-bottom: 5%;
+    margin-left : 5%
+ }
+
  .login-form-label {
     font-family: 'Poppins-Regular';
     font-size: 14px;
@@ -119,11 +124,13 @@ input:focus {
      padding-bottom : 31px;
      text-align : right;
      font-family: 'Poppins-Regular';
+     margin-right : 10%
  }
 
- a {
+.login-form-forgot-pwd-link, .signup-text {
     color: #FFFFFF
  }
+
 
 ::placeholder {
     color: #FFFFFF;
@@ -208,7 +215,7 @@ input:focus {
 	width:100%;
 	height:100%;
 	display:none;
-	position:fixed;
+	position:absolute;
 	top:0px;
 	left:0px;
     background-color: rgba(0, 0, 0, 0.23);
@@ -217,7 +224,8 @@ input:focus {
 }
 
 .registration-popup-inner {
-	max-width:700px;
+    max-width:700px;
+    max-height:500px;
 	width:90%;
 	padding:40px;
 	position:absolute;
@@ -227,6 +235,7 @@ input:focus {
 	transform:translate(-50%, -50%);
 	background-color: rgba(0, 0, 0, 0.23);
     border-radius: 40px;
+    overflow-y: scroll;
 }
 
 .signup-form-submit-btn {
@@ -336,10 +345,75 @@ input:focus {
     }
   }
 
-  .signup-form-input-validate {
+  .signup-form-select-container {
     width: 100%;
     position: relative;
     border-bottom: 2px rgba(0,0,0,0.3);
     margin-bottom: 5%;
     margin-left : 5%
  }
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(120, 119, 119,0.1); 
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFFFFF; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.signup-form-select, .signup-form-select-container select {
+    font-family: 'Poppins-Medium';
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.2;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    display: block;
+    width: 85%;
+    height: 55px;
+    background: transparent;
+    padding-left : 5px;
+ }
+
+ .signup-form-select option, .signup-form-select-container option {
+     color : black
+ }
+
+ .signup-form-shelter-container {
+     display : none;
+ }
+
+ select:focus {
+     outline : none;
+ }
+
+.po-form {
+    display : none;
+}
+
+ .sh-form {
+     display: none;
+ }
+ 
+
+
+ 
+
+
+
+
+
+

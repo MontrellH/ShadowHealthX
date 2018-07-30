@@ -21,7 +21,7 @@
 } */
 
 .header_image{
-	background-image:   asset-url("logo.png");
+	background-image:  asset-url("logo.png");
 	width: 10%;
 	height: 60px;
 	background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 }
 
 .header-login-signup .header-limiter nav {
-	font:16px Arial, Helvetica, sans-serif;
+	font:16px Poppins-Bold;
 	line-height: 40px;
 	float: left;
 	margin: 0 0 0 200px;

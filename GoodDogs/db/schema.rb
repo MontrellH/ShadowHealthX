@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_183627) do
+ActiveRecord::Schema.define(version: 2018_07_29_225637) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2018_07_27_183627) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.integer "shelter_id"
+    t.index ["shelter_id"], name: "index_users_on_shelter_id"
   end
 
 end

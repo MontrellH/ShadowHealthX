@@ -113,11 +113,11 @@ $(function() {
             success:function(data) {
                 console.log(data);
                 var i;
-                var $select = $("#shelter_id");
+                var $select = $("#shelter_name");
                 console.log($select);
                 $.each(data, function(i, el) {
                     console.log(el);
-                    $select.append($("<option />", { text: el.Name }));
+                    $select.append($("<option />", { text: el.name }));
                 });
             }
           });

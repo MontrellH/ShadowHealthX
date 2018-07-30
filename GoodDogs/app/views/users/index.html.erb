@@ -4,10 +4,9 @@
 </head>
 <div class = "before-content"></div>
 <body>
-
     <div class="registration-popup" data-popup="regpop" visibilty="hidden">
         <div class = "registration-popup-inner">
-            <form action = "/users" method = "POST" class = "login-form">
+            <form action = "/users" method = "POST" class =  "login-form">
 
                 <span class = "login-form-title"> Registration </span>
                 <input type = "hidden" name="authenticity_token" value="<%form_authenticity_token%>">
@@ -50,12 +49,12 @@
                 <div class = "sh-form">
                     <div class = "signup-form-input-validate">
                         <span class = "login-form-label "> Address </span>
-                        <input type = "text" name = "user[addr]" placeholder = "Enter your Address" class="login-form-input login-form-addr" id="gmaps-input-address">
+                        <input type = "addr" name = "user[address]" placeholder = "Enter your Address" class="login-form-input">
                     </div>
 
                     <div class = "signup-form-input-validate">
                         <span class = "login-form-label"> City </span>
-                        <input type = "text" name = "user[city]" placeholder = "Enter your Shelter city" class="login-form-input">
+                        <input type = "city" name = "user[sheltercity]" placeholder = "Enter your Shelter city" class="login-form-input">
                     </div>
 
                 </div>
@@ -63,12 +62,12 @@
                 <div class = "po-form">
                     <div class = "signup-form-input-validate">
                         <span class = "login-form-label"> City </span>
-                        <input type = "text" name = "user[city]" placeholder = "Enter your Shelter city" class="login-form-input signup-form-shelter-city">
+                        <input type = "city" name = "user[city]" placeholder = "Enter your Shelter city" class="login-form-input signup-form-shelter-city">
                     </div>
 
                     <div class="signup-form-select-container signup-form-shelter-container">
                         <span class = "login-form-label"> Choose a Shelter</span>
-                        <%= select_tag "shelter_id", options_from_collection_for_select({}, "id", "Name") %>
+                        <%= select_tag "shelter_name", options_from_collection_for_select({}, "id", "Name") %>
                     </div>
 
                 </div> 
@@ -113,7 +112,7 @@
             </div>
 
             <div class="login-form-forgot-pwd">
-                <a href="#">
+                <a href="#" class="login-form-forgot-pwd-link">
                    Forgot password?
                 </a>
             </div>

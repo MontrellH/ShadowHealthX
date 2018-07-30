@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :homepage
   resources :shelters
   resources :dogs
+
+  get "/button/:id" => "homepage#button", as: 'button'
 end

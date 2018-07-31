@@ -1,3 +1,19 @@
-<h1> Name of Shelter <%= @shelter.name %> </h1>
-<h1>*Donate*</h1>
-<!-- <div id='map' data-shelter="<%= @shelter.to_json%>"></div> -->
+<h3>Shelter</h3>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shelter.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @shelter.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @shelter.city %>
+</p>
+
+<%= link_to 'Edit', edit_shelter_path(@shelter) %> |
+<%= link_to 'Back', shelters_path %>

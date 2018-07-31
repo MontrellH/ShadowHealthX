@@ -31,8 +31,6 @@ class DogsController < ApplicationController
   end
 
   def update
-
-
     if @dog.update(dog_params)
       redirect_to @dog
     else
@@ -41,15 +39,13 @@ class DogsController < ApplicationController
   end
 
   def destroy
-
     @dog.destroy
-
     redirect_to '/dogs'
   end
 
   private
   def set_dog
-            @dog = Dog.find(params[:id])
+      @dog = Dog.find(params[:id])
   end
 
   def authorize!

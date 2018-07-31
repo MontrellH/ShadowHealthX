@@ -28,7 +28,12 @@ class SheltersController < ApplicationController
 
 
    def show
+    puts "aaa #{params[:id]}"
      @shelter = Shelter.find(params[:id])
+     @dogs = @shelter.dogs
+     @dogs.each do |dog|
+      puts "aaaa #{dog.name}"
+     end
    end
 
 

@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  
     skip_before_action :verify_authenticity_token
     def create
         user = User.find_by(email:login_params[:email])
@@ -14,7 +13,7 @@ class SessionsController < ApplicationController
 
     def destroy
         puts "Here"
-        User.find(session[:user_id]).destroy
+        # User.find(session[:user_id]).destroy
         session[:user_id] = nil
         redirect_to '/'
     end

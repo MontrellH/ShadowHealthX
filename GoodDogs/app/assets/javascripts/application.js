@@ -13,12 +13,13 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 $(document).ready(function(){
     console.log('Working');
-    
-    
+
+
 });
 
 
@@ -40,7 +41,7 @@ $(function() {
             else {
                 $(this).removeClass('has-val');
             }
-        })    
+        })
     });
 
     function showValidate(input) {
@@ -54,7 +55,7 @@ $(function() {
     }
 
     var input = $('.login-form-input-validate .login-form-input');
-    $('.login-form-exclusive').on('submit',function(){    
+    $('.login-form-exclusive').on('submit',function(){
         var check = true;
         for(var i=0; i<input.length; i++) {
             if(validate(input[i]) == false){
@@ -107,7 +108,7 @@ $(function() {
         $.ajax({
             type: "get",
             url: "/shelter_manipulations",
-            data: { 
+            data: {
                 city: cityname
             },
             success:function(data) {

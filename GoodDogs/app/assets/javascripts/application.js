@@ -18,7 +18,8 @@
 //= require_tree .
 $(document).ready(function(){
     console.log('Working');
-
+    // var buttonState=Boolean(localStorage.getItem("button-state"));
+    // $(".good_dog_btn").attr('disabled',buttonState);
 
 });
 
@@ -125,9 +126,10 @@ $(function() {
         $('.signup-form-shelter-container').css('display','block');
     });
 
-    // $('.good_dog_btn').on('click',function(){
-    //     $('.good_dog_btn').prop('disabled',true);
-    //
-    // });
+//     $('.good_dog_btn').on('click',function(){
+//        $(this).attr("disabled", true);
+//        localStorage.setItem("button-state", 'true');
+// });
+
 
 });

@@ -15,12 +15,12 @@
   <div class="scroll_container">
 
     <%@dogs.each do |dog|%>
-    <p><%=dog.name%></p>
+    <p class="dog_name_title"><%=dog.name%></p>
     <img class="homepage_scrolling_image" id="picture_1" ></img>
-    <%unless @vote.first(dog.id) == nil%>
-    <%= button_to 'Who\'s a Good Dog?', button_path(id: dog.id), class: "good_dog_btn", data: { disable_with: 'What a Good Dog'}%>
+    <%unless @user.has_dog?(dog)%>
+    <%= button_to 'Who\'s a Good Dog?', button_path(id: dog.id), class: "good_dog_btn" %>
     <%else%>
-    <div> Still a Good Dog! </div>
+    <button class="clicked_good_dog_btn"> I'm a Good Dog! </button>
     <%end%>
     <!-- <button class="good_dog_btn" type="button" onclick="voteDog(dog)"> Who's a Good Dog?</button> -->
 
@@ -46,9 +46,9 @@
 
   <div class="right_hand_side">
 
-<p>test</p>
-    <div class="leaderboard">
-      <ol>
+
+    <div >
+      <ol class="leaderboard">
         <li id="leaderTitle"> Leaderboard </li>
         <% count = 0%>
         <% @dogs.order(:points)%>

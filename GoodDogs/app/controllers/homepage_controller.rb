@@ -1,5 +1,6 @@
 class HomepageController < ApplicationController
   def index
+    @user = current_user
     @dogs = Dog.by_points
     @vote = Vote.where("user_id = ?", current_user )
   end

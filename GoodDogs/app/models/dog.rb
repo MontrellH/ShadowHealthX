@@ -1,6 +1,7 @@
 class Dog < ApplicationRecord
   before_create :init_points
   belongs_to :user
+  has_many :votes
   validates :name, :breed, :description, presence: true,
                                          length: {minimum: 3}
 

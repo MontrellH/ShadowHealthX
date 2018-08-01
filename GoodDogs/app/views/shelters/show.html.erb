@@ -1,7 +1,8 @@
 <h1> Name of Shelter </h1>
 <h3><%= @shelter.name %> </h3>
 <h1> Map of the shelter </h1>
-<div id='map' data-shelters="<%= @shelters.to_json%>"></div>
+<div id='map' data-shelters="<%= @shelter.to_json%>"></div>
+</script>
 <h1> Dog names: </h1> 
 <% @dogs.each do |dog|%>
     <h3><%= dog.name %></h3>

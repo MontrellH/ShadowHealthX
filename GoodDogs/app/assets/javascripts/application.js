@@ -125,4 +125,9 @@ $(function() {
         $('.signup-form-shelter-container').css('display','block');
     });
 
+    // $('.good_dog_btn').on('click',function(){
+    //     $('.good_dog_btn').prop('disabled',true);
+    //
+    // });
+
 });

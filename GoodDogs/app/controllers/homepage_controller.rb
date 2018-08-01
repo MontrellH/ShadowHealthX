@@ -12,7 +12,6 @@ class HomepageController < ApplicationController
     @vote.user_id = current_user.id
     @vote.dog_id = @dog.id
     @vote.save!
-
     @dog.points += 1
     @dog.save!
     redirect_to homepage_index_path

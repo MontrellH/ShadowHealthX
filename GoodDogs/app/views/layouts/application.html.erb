@@ -16,9 +16,9 @@
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
   </head>
   <body>
-    <%= render "layouts/header"%>
+    <%= render "layouts/header" unless @skip_header %>
     <%= yield %>
-    <%= render "layouts/footer"%>
+    <%= render "layouts/footer" unless @skip_footer %>
   </body><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj5IToJURWq7GJlIQbYbC7DmneUp7DV7c&callback=initMap" type="text/javascript"></script>
 
 </html>

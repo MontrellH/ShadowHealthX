@@ -5,7 +5,7 @@
   <!-- <link rel="stylesheet" href="assets/homepage.SCSS"> -->
 
 </head>
-<body>
+<body class="web_page">
 
 
 <div class="divider"></div>
@@ -15,6 +15,7 @@
   <div class="scroll_container">
 
     <%@dogs.each do |dog|%>
+    
     <p class="dog_name_title"><%=dog.name%></p>
     <img class="homepage_scrolling_image" id="picture_1" ></img>
     <%unless @user.has_dog?(dog)%>

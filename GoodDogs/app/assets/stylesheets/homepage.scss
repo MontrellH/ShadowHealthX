@@ -48,7 +48,7 @@ ol li{
 
 .left_hand_side{
   display: inline;
-  margin-left: 8%;
+  margin-left: 15%;
   width: 45%;
   //border-style: dashed;
   //border: solid 10px black;
@@ -66,8 +66,7 @@ ol li{
 }
 
 .scroll_container{
-  display: inline;
-  width: 50%;
+
 }
 
 .leaderb_list_item{
@@ -104,6 +103,7 @@ ol li{
   background-color: rgba(248, 51, 60, 0.9);
   border-radius: 10px;
   margin: 10px 0px;
+  margin-bottom: 25px;
 }
 
 .clicked_good_dog_btn{
@@ -118,13 +118,19 @@ ol li{
   background-color: rgba(68, 175, 105, 0.9);
   border-radius: 10px;
   margin: 10px 0px;
+  margin-bottom: 25px;
 }
 
 .scroll_container{
+  width: 50%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 25px;
+  max-width: 800px;
+  background-color: #2B9EB3;
+  border-radius: 50px;
 
 }
 
@@ -135,6 +141,12 @@ ol li{
   background-color: #FCAB10;
   border-radius: 15px;
   padding: 5px 15px;
+  margin-top: 25px;
+}
+
+.web_page{
+  // background-image: none;
+  background-color: #DBD5B5;
 }
 
 #leaderTitle{

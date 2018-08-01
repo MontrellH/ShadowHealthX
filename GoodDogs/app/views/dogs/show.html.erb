@@ -1,29 +1,12 @@
-<h3>Dog</h3>
+<body>
+  <div class="left_hand_side">
+    <img class="dog_profile_image"></img>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @dog.name %>
-</p>
-
-<p>
-  <strong>Breed:</strong>
-  <%= @dog.breed %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @dog.age %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @dog.description %>
-</p>
-
-<p>
-  <strong>Points:</strong>
-  <%= @dog.points %>
-</p>
-
-<%= link_to 'Edit', edit_dog_path(@dog) %> |
-<%= link_to 'Back', dogs_path %>
+  <div class="right_hand_side">
+    <p> Name: <%= @dog.name %> </p>
+    <p> Breed: <%= @dog.breed %> </p>
+    <p> Age:  <%= @dog.age%></p>
+    <p> Description: <%= @dog.description%> </p>
+  </div>
+</body>

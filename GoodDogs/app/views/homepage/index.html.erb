@@ -50,9 +50,15 @@
     <div class="leaderboard">
       <ol>
         <li id="leaderTitle"> Leaderboard </li>
+        <% count = 0%>
         <% @dogs.order(:points)%>
         <% @dogs.each do |dog| %>
+        <% count += 1%>
+        <% if count < 10%>
         <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"><%= dog.name%></a></p><p class="leaderb_list_text" id="dog_1"><%=dog.points%></p></li>
+        <% else %>
+          <% return %>
+          <%end%>
         <% end %>
 
       </ol>

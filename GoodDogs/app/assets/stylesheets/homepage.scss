@@ -7,7 +7,7 @@
 }
 
 li p{
-  color:white;
+  color:#FCAB10;
 }
 
 ol{
@@ -15,29 +15,25 @@ ol{
   background-color: rgba(0, 0, 0, .8);
   margin: 0;
   padding: 0;
-
   border-radius: 30px;
+
 
 }
 
 ol li{
-  background-color: rgba(50, 50, 50, .9);
-  font-size: 1.8em;
+  background-color: rgba(0, 0, 0, .25);
+  font-size: 1.5em;
   padding: 2%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 15px;
   font-family: "Poppins-SemiBold";
   display: flex;
   justify-content: space-between;
   color: white;
 
+
 }
 
 .leaderboard{
-  //transform: scale(1.4);
   padding: 10px;
-
 }
 
 .divider{
@@ -75,51 +71,23 @@ ol li{
 }
 
 .leaderb_list_text{
-
   display: inline-block;
 }
 
 
 
 .homepage_scrolling_image{
-  background-image:   asset-url("loginbackgnd.jpg");
+  background-image:  asset-url("loginbackgnd.jpg");
   width: 90%;
   max-width: 600px;
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 200px;
+  align-self: flex-start;
+  border-radius: 20px
 }
 
-.good_dog_btn{
-  font-family: 'Poppins-Medium';
-  font-size: 16px;
-  color: #ffffff;
-  line-height: 1.2;
-  text-transform: uppercase;
 
-  // width: 70%;
-  height: 100px;
-  background-color: rgba(248, 51, 60, 0.9);
-  border-radius: 10px;
-  margin: 10px 0px;
-  margin-bottom: 25px;
-}
-
-.clicked_good_dog_btn{
-  font-family: 'Poppins-Medium';
-  font-size: 16px;
-  color: #ffffff;
-  line-height: 1.2;
-  text-transform: uppercase;
-
-  // width: 70%;
-  height: 100px;
-  background-color: rgba(68, 175, 105, 0.9);
-  border-radius: 10px;
-  margin: 10px 0px;
-  margin-bottom: 25px;
-}
 
 .scroll_container{
   width: 50%;
@@ -127,29 +95,76 @@ ol li{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
-  max-width: 800px;
-  background-color: #2B9EB3;
-  border-radius: 50px;
+  width : 40%
 
 }
 
 .dog_name_title{
-  color: white;
-  font-family: Poppins-Bold;
+  color: #FFFFFF;
+  font-family: Poppins-Regular;
   font-size: 1.8em;
-  background-color: #FCAB10;
+  background-color:rgba(0, 0, 0, .65) ;
   border-radius: 15px;
+  margin-top: 5%;
   padding: 5px 15px;
-  margin-top: 25px;
+  align-self: flex-start
+}
+.dog-points {
+  color:#FCAB10;
+  font-family:Poppins-Medium;
+  font-size : 20px;
+  margin-top: 2%;
+  align-self: flex-start;
+  background-color:rgba(0, 0, 0, .65) ;
+  border-radius:25px;
+  padding: 7px 7px 7px 7px;
 }
 
-.web_page{
-  // background-image: none;
-  background-color: #DBD5B5;
+.dog_description {
+  font-family: Poppins-Regular;
+  font-size: 1.2em;
+  margin-top : 10px;
+  align-self: flex-start;
+  color: #ffffff;
+  background-color:rgba(0, 0, 0, .65);
+  border-radius: 25px;
+  padding: 15px 15px 15px 15px;
+  max-width: 600px;
+  word-wrap: break-word;
+}
+
+.good_dog_btn{
+  font-family: 'Poppins-Medium';
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.2cm;
+  background-color: rgba(248, 51, 60, 0.9);
+  border-radius: 10px;
+  margin-bottom : 10%;
+  margin-left: -135%;
+}
+
+.clicked_good_dog_btn{
+  font-family: 'Poppins-Medium';
+  font-size: 20px;
+  color: #09ef2b;
+  margin-top: 2%;
+  align-self: flex-start;
+  background-color:rgba(0, 0, 0, .5) ;
+  border-radius:25px;
+  padding: 7px 7px 7px 7px;
+
 }
 
 #leaderTitle{
-
   text-align: center;
+}
+
+.hr {
+    display:block;
+    width:100%; /*or whatever width you want the effect of <hr>*/
+    border-top: 1px solid #070707;
+    margin-top:3%;
+    float:left;
 }

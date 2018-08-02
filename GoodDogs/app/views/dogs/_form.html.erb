@@ -35,6 +35,16 @@
   </p>
 
   <p>
+    <%= form.label :avatars %><br />
+    <%= form.file_field :avatars, multiple: true %>
+  </p>
+
+  <p>
+      Remove avatars
+      <%= form.check_box :remove_avatars %>
+  </p>
+
+  <p>
     <%= form.submit %>
   </p>
 

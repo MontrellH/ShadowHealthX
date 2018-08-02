@@ -1,6 +1,6 @@
 /* Add padding to containers */
 td, th {
-    border: 1px solid #dddddd;
+    // border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
@@ -47,6 +47,12 @@ h1{
     text-align: center
 }
 
-.btn btn-primary{
+.btn-primary{
+  padding: 20px 70px;
+  font-family: Poppins-Medium;
   align-content: center;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-left: 41%;
+  margin-right: auto;
 }

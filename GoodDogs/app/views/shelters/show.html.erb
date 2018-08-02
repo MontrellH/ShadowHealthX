@@ -7,7 +7,7 @@
 <% @dogs.each do |dog|%>
     <h3><%= dog.name %></h3>
 <% end %>
-<div id="paypal-button"></div>
+<div id="paypal-button">Donate</div>
 <script>
 paypal.Button.render({
     // Configure environment
@@ -22,6 +22,8 @@ paypal.Button.render({
       size: 'medium',
       color: 'gold',
       shape: 'pill',
+      label: 'pay',
+      tagline :false
     },
     // Set up a payment
     payment: function (data, actions) {
@@ -44,4 +46,4 @@ paypal.Button.render({
     }
   }, '#paypal-button');
   </script>
-<a href="#">Donate</a>
+

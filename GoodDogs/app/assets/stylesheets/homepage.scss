@@ -75,7 +75,6 @@ ol li{
 
 
 .homepage_scrolling_image{
-  background-image:  asset-url("loginbackgnd.jpg");
   width: 90%;
   max-width: 600px;
   height: 500px;
@@ -164,5 +163,9 @@ ol li{
     border-top: 1px solid #070707;
     margin-top:3%;
     float:left;
+}
+
+.leaderb_list_text a {
+  color : #ffffff;
 }
  

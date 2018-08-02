@@ -25,12 +25,17 @@
   <%= @dog.points %>
 </p>
 
+<p>
+  <strong>Shelter:</strong>
+  
+</p>
+
 <div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
     <% @dog.avatars.each do |avatar| %>
     <div class="item">
-     <%= link_to(image_tag(avatar.url, alt: 'Image'), avatar.url, target: '_blank') %>
+     <%= link_to(image_tag(avatar.url, alt: 'Image', class: "resize_me"), avatar.url, target: '_blank') %>
     </div>
 
     <!-- Controls -->
@@ -51,4 +56,3 @@
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>
-

@@ -28,6 +28,19 @@ p {
     font-family: Poppins-Medium;
     color: black;
 }
+
+h1{
+  font-family: Poppins-Bold;
+}
+
+h3{
+  font-family: Poppins-Medium;
+}
+
+a{
+  font-family: Poppins-SemiBold;
+}
+
 .header {
     width:100px;
     height:100px;

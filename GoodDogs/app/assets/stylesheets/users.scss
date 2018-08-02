@@ -26,7 +26,7 @@
     src: asset-url('fonts/FontAwesome.otf') format('truetype');
 }
 
-body
+.root
 {
   background: {
     image: asset-url("loginbackgnd3.jpg");
@@ -34,6 +34,18 @@ body
     align-self: center;
     size: cover;
     height : 100%
+  }
+}
+
+
+.not-root
+{
+  background: {
+    image: asset-url("loginbackgnd6.jpg");
+    size: contain;
+    attachment: fixed;
+    position: center;
+    repeat: no-repeat;
   }
 }
 

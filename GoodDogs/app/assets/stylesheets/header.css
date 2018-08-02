@@ -1,5 +1,5 @@
 .header-login-signup{
-	background-color: rgba(43, 158, 179, 0.75);
+	background-color: rgba(79, 81, 81, 0.80);
 	box-shadow:0 1px 1px #ccc;
 	padding: 20px 40px;
 	height: 60px;
@@ -134,3 +134,18 @@ body {
 	margin:0;
 	padding:0;
 }
+
+nav {
+	width: 65%;
+	float : left
+}
+
+.header-home, .header-shelter, .header-dogs {
+	margin-right : 14%;
+	float: left;
+}
+.header-signout ul li {
+	margin-top : 4px
+}
+
+

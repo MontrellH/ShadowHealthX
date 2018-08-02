@@ -12,8 +12,6 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        puts "Here"
-        # User.find(session[:user_id]).destroy
         session[:user_id] = nil
         redirect_to '/'
     end

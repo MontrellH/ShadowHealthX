@@ -24,9 +24,9 @@ class DogsController < ApplicationController
       @dog = Dog.new(dog_params)
       @dog.user = current_user
       if @dog.save!
-        redirect_to '/dogs'
+        redirect_to dogs_path
       else
-        render'new'
+        render new_dog_path
     end
   end
 
@@ -34,13 +34,13 @@ class DogsController < ApplicationController
     if @dog.update(dog_params)
       redirect_to @dog
     else
-      render 'edit'
+      render edit_dog_path
     end
   end
 
   def destroy
     @dog.destroy
-    redirect_to '/dogs'
+    redirect_to dogs_path
   end
 
   private
@@ -55,7 +55,7 @@ class DogsController < ApplicationController
   end
 
   def dog_params
-        params.require(:dog).permit(:name, :breed, :description, :age)
+        params.require(:dog).permit(:name, :breed, :description, :age, :avatar, {avatars: []},:remove_avatars)
   end
 
 end

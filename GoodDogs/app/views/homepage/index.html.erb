@@ -3,8 +3,9 @@
 <head>
 </head>
 <body>
+
 <div class="divider"></div>
-  <div class="left_hand_side">
+  <!-- <div class="left_hand_side">
     <div class="scroll_container">     
       <%@dogs.each do |dog|%>
         <p class="dog_name_title">
@@ -20,14 +21,41 @@
         <%else%>
           <div class="clicked_good_dog_btn"> I'm a Good Dog!!!! </div>
          <%end%>
-         <span class = "hr"></span>
+         
       <%end%>
     </div>
+  </div> -->
+
+
+
+  <div class="left_hand_side">
+
+  <div class="scroll_container">
+    <%@dogs.each do |dog|%>
+      <p class="dog_name_title">
+        <%=dog.name%>
+      </p>
+      <%= dog.avatars.each do |avatar| %>
+        <%= image_tag (avatar.url) %>
+          <%break %>
+      <%end%>
+      <div class="dog-points"><%= dog.points%> people have upvoted this dog </div>
+      <p class="dog_description">
+          <%=dog.description%>
+      </p>  
+      <%unless @user.has_dog?(dog)%>
+      <%= button_to 'Who\'s a Good Dog?', button_path(id: dog.id), class: "good_dog_btn" %>
+      <%else%>
+      <button class="clicked_good_dog_btn"> I'm a Good Dog! </button>
+      <%end%>
+      <span class = "hr"></span>
+    <%end%>
   </div>
 
-
+  </div>
 
   <div class="right_hand_side">
+
     <div >
       <ol class="leaderboard">
         <li id="leaderTitle"> Leaderboard </li>

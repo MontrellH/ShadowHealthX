@@ -22,9 +22,9 @@ class SheltersController < ApplicationController
   def create
     @shelter = Shelter.new(shelter_params)
       if @shelter.save!
-        redirect_to '/shelters'
+        redirect_to shelters_path
       else
-        render 'new'
+        render new_shelter_path
       end
   end
 
@@ -32,7 +32,7 @@ class SheltersController < ApplicationController
     if @shelter.update(shelter_params)
       redirect_to @shelter
     else
-      render 'edit'
+      render edit_shelter_path
     end
   end
 
@@ -43,7 +43,7 @@ class SheltersController < ApplicationController
    
   def destroy
     @shelter.destroy
-    redirect_to '/shelters'
+    redirect_to shelters_path
   end
 
   private

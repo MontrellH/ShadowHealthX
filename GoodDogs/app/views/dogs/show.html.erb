@@ -1,12 +1,54 @@
-<body>
-  <div class="left_hand_side">
-    <img class="dog_profile_image"></img>
-  </div>
+<h3>Dog</h3>
 
-  <div class="right_hand_side">
-    <p> Name: <%= @dog.name %> </p>
-    <p> Breed: <%= @dog.breed %> </p>
-    <p> Age:  <%= @dog.age%></p>
-    <p> Description: <%= @dog.description%> </p>
-  </div>
-</body>
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @dog.breed %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @dog.age %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dog.description %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @dog.points %>
+</p>
+
+<div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+    <% @dog.avatars.each do |avatar| %>
+    <div class="item">
+     <%= link_to(image_tag(avatar.url, alt: 'Image'), avatar.url, target: '_blank') %>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <% end %>
+</div>
+<script type="text/javascript">
+    $(function(){
+    $('.carousel').carousel();
+    $('.item:first').addClass('active');
+    });
+    </script>
+
+<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Back', dogs_path %>
+

@@ -25,5 +25,29 @@
   <%= @dog.points %>
 </p>
 
+<div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+    <% @dog.avatars.each do |avatar| %>
+    <div class="item">
+     <%= link_to(image_tag(avatar.url, alt: 'Image'), avatar.url, target: '_blank') %>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <% end %>
+</div>
+<script type="text/javascript">
+    $(function(){
+    $('.carousel').carousel();
+    $('.item:first').addClass('active');
+    });
+    </script>
+
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>

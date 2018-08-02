@@ -17,8 +17,12 @@
   <div class="scroll_container">
 
     <%@dogs.each do |dog|%>
-    <p><%=dog.name%></p>
-    <img class="homepage_scrolling_image" id="picture_1" ></img>
+      <p><%=dog.name%></p>
+        <%= dog.avatars.each do |avatar| %>
+        <%= image_tag (avatar.url) %>
+        <%break %>
+      <%end%>
+    <!-- <img class="homepage_scrolling_image" id="picture_1" ></img> -->
     <%= link_to 'button', button_path(id: dog.id)%>
 
     <!-- <button class="good_dog_btn" type="button" onclick="voteDog(dog)"> Who's a Good Dog?</button> -->

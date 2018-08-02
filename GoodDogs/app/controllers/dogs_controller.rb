@@ -12,7 +12,11 @@ class DogsController < ApplicationController
   end
 
   def show
-
+    set_dog
+    user_id = @dog.user_id
+    @user = User.find_by_id(user_id)
+    shelter_id = @user.shelter_id
+    @shelter = Shelter.find_by_id(shelter_id)
   end
 
   def edit

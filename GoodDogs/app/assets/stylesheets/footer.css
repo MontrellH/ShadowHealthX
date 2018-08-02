@@ -1,5 +1,5 @@
 .footer-distributed{
-	background-color: rgba(0, 0, 0, 0.23);
+	background-color: rgba(79, 81, 81, 0.80);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -38,7 +38,7 @@
 }
 
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	color:  #FFFFFF;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;

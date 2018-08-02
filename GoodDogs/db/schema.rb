@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2018_08_01_150916) do
+
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
@@ -49,6 +51,15 @@ ActiveRecord::Schema.define(version: 2018_08_01_150916) do
     t.string "name"
     t.integer "shelter_id"
     t.index ["shelter_id"], name: "index_users_on_shelter_id"
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "dog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dog_id"], name: "index_votes_on_dog_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
 end

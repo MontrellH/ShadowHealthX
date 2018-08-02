@@ -7,55 +7,41 @@
 </head>
 <body>
 
-
 <div class="divider"></div>
 
   <div class="left_hand_side">
 
-
-
   <div class="scroll_container">
-
     <%@dogs.each do |dog|%>
-      <p><%=dog.name%></p>
-        <%= dog.avatars.each do |avatar| %>
-        <%= image_tag (avatar.url) %>
-        <%break %>
+      <p class="dog_name_title"><%=dog.name%></p>
+          <%= dog.avatars.each do |avatar| %>
+          <%= image_tag (avatar.url) %>
+          <%break %>
+        <%end%>
+      <%unless @user.has_dog?(dog)%>
+      <%= button_to 'Who\'s a Good Dog?', button_path(id: dog.id), class: "good_dog_btn" %>
+      <%else%>
+      <button class="clicked_good_dog_btn"> I'm a Good Dog! </button>
       <%end%>
-    <!-- <img class="homepage_scrolling_image" id="picture_1" ></img> -->
-    <%= link_to 'button', button_path(id: dog.id)%>
-
-    <!-- <button class="good_dog_btn" type="button" onclick="voteDog(dog)"> Who's a Good Dog?</button> -->
-
-    <!-- <img class="homepage_scrolling_image" id="picture_2"></img>
-
-    <button class="good_dog_btn"> Who's a Good Dog?</button>
-
-    <img class="homepage_scrolling_image" id="picture_3"></img>
-
-    <button class="good_dog_btn"> Who's a Good Dog?</button>
-
-    <img class="homepage_scrolling_image" id="picture_4"></img>
-
-    <button class="good_dog_btn"> Who's a Good Dog?</button> -->
     <%end%>
   </div>
-
-
-
-
 
   </div>
 
   <div class="right_hand_side">
 
-<p>test</p>
-    <div class="leaderboard">
-      <ol>
+    <div >
+      <ol class="leaderboard">
         <li id="leaderTitle"> Leaderboard </li>
+        <% count = 0%>
         <% @dogs.order(:points)%>
         <% @dogs.each do |dog| %>
+        <% count += 1%>
+        <% if count < 10%>
         <li><p class="leaderb_list_text"><a href=# class="leaderb_list_item"><%= dog.name%></a></p><p class="leaderb_list_text" id="dog_1"><%=dog.points%></p></li>
+        <% else %>
+          <% return %>
+          <%end%>
         <% end %>
 
       </ol>

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     def index
-      @skip_header = true 
-      @skip_footer = true
+        @skip_header = true
+        @skip_footer = true
     end
 
     def create

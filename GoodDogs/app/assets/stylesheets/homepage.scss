@@ -16,7 +16,7 @@ ol{
   margin: 0;
   padding: 0;
 
-  border-radius: 5px;
+  border-radius: 30px;
 
 }
 
@@ -26,7 +26,7 @@ ol li{
   padding: 2%;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
+  border-radius: 15px;
   font-family: "Poppins-SemiBold";
   display: flex;
   justify-content: space-between;
@@ -36,6 +36,7 @@ ol li{
 
 .leaderboard{
   //transform: scale(1.4);
+  padding: 10px;
 
 }
 
@@ -47,7 +48,7 @@ ol li{
 
 .left_hand_side{
   display: inline;
-  margin-left: 1%;
+  margin-left: 8%;
   width: 45%;
   //border-style: dashed;
   //border: solid 10px black;
@@ -58,7 +59,9 @@ ol li{
   display: inline;
   float: right;
   margin-right: 1%;
+  margin-left: 3%;
   width: 45%;
+  max-width: 600px;
   position: fixed;
 }
 
@@ -82,9 +85,11 @@ ol li{
 .homepage_scrolling_image{
   background-image:   asset-url("loginbackgnd.jpg");
   width: 90%;
+  max-width: 600px;
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 200px;
 }
 
 .good_dog_btn{
@@ -94,9 +99,23 @@ ol li{
   line-height: 1.2;
   text-transform: uppercase;
 
-  width: 70%;
+  // width: 70%;
   height: 100px;
-  background-color: rgba(25, 200, 25, 0.9);
+  background-color: rgba(248, 51, 60, 0.9);
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.clicked_good_dog_btn{
+  font-family: 'Poppins-Medium';
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  // width: 70%;
+  height: 100px;
+  background-color: rgba(68, 175, 105, 0.9);
   border-radius: 10px;
   margin: 10px 0px;
 }
@@ -107,6 +126,15 @@ ol li{
   align-items: center;
   justify-content: center;
 
+}
+
+.dog_name_title{
+  color: white;
+  font-family: Poppins-Bold;
+  font-size: 1.8em;
+  background-color: #FCAB10;
+  border-radius: 15px;
+  padding: 5px 15px;
 }
 
 #leaderTitle{

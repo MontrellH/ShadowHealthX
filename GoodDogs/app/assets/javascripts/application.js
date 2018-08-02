@@ -18,7 +18,8 @@
 //= require_tree .
 $(document).ready(function(){
     console.log('Working');
-
+    // var buttonState=Boolean(localStorage.getItem("button-state"));
+    // $(".good_dog_btn").attr('disabled',buttonState);
 
 });
 
@@ -124,5 +125,4 @@ $(function() {
           });
         $('.signup-form-shelter-container').css('display','block');
     });
-
 });

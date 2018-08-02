@@ -15,6 +15,31 @@
 
 }
 
+th{
+  color: white;
+  font-family: Poppins-Bold;
+}
+
+td{
+  color: white;
+  font-family: Poppins-Regular;
+  border-radius: 30px;
+}
+
+.h1, .h2, .h4, .h5, .h6, h1, h2, h4, h5, h6{
+  font-family: Poppins-Bold !important;
+}
+
+.h3, h3{
+  font-family: Poppins-SemiBold !important;
+}
+
+a{
+  font-family: Poppins-Medium !important;
+}
+
+
+
 .square{
   display: block;
   border: 5px solid black;
@@ -28,5 +53,7 @@
 }
 
 .table.table-hover{
-  background-color: rgba(200, 200, 200, .7);
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, .75);
+  border-radius: 30px;
 }

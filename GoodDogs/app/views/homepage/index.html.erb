@@ -14,7 +14,7 @@
   <div class="scroll_container">
     <%@dogs.each do |dog|%>
       <p class="dog_name_title"><%=dog.name%></p>
-          <%= dog.avatars.each do |avatar| %>
+          <% dog.avatars.each do |avatar| %>
           <%= image_tag (avatar.url) %>
           <%break %>
         <%end%>

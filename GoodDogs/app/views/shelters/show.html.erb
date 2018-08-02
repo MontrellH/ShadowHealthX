@@ -2,11 +2,40 @@
 <h3><%= @shelter.name %> </h3>
 <h1> Map of the shelter </h1>
 <div id='map' data-shelters="<%= @shelter.to_json%>"></div>
-</script>
-<h1> Dog names: </h1> 
-<% @dogs.each do |dog|%>
-    <h3><%= dog.name %></h3>
-<% end %>
+
+<h1> Dogs: </h1>
+    <div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <% @dogs.each do |dog| %>
+            <% avatar = dog.avatars[0]%>
+            <div class="item">
+              <%= link_to(image_tag(avatar.url, alt: 'Image'), avatar.url, target: '_blank') %>
+              <div class="carousel-caption">
+                <h3><%= link_to dog.name, dog_path(dog) %></h3>
+              </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          <%end%>
+        </div>
+
+          <!-- Controls -->
+
+
+
+    <script type="text/javascript">
+        $(function(){
+        $('.carousel').carousel();
+        $('.item:first').addClass('active');
+        });
+    </script>
+</div>
+
 <div id="paypal-button"></div>
 <script>
 paypal.Button.render({
@@ -44,4 +73,3 @@ paypal.Button.render({
     }
   }, '#paypal-button');
   </script>
-<a href="#">Donate</a>

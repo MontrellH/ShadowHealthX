@@ -36,7 +36,7 @@
         <%=dog.name%>
       </p>
       <%= dog.avatars.each do |avatar| %>
-        <%= image_tag (avatar.url) %>
+        <%= image_tag (avatar.url), class: "homepage_scrolling_image"%>
           <%break %>
       <%end%>
       <div class="dog-points"><%= dog.points%> people have upvoted this dog </div>

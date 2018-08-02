@@ -77,12 +77,8 @@ ol li{
 
 
 .homepage_scrolling_image{
-  background-image:  asset-url("loginbackgnd.jpg");
-  width: 90%;
-  max-width: 600px;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  max-width: 500px;
+  max-height: 500px;
   align-self: flex-start;
   border-radius: 20px
 }

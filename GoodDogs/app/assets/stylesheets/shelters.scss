@@ -14,16 +14,33 @@
   text-align: center;
 
 }
+tbody{
+  border-radius: 30px;
+}
+thead{
+  border-radius: 20px;
+
+}
+tr{
+  border-radius: 20px;
+
+}
 
 th{
   color: white;
   font-family: Poppins-Bold;
+  border-bottom: none !important;
+  padding-left: 15px !important;
+
 }
 
 td{
   color: white;
   font-family: Poppins-Regular;
   border-radius: 30px;
+  padding-left: 12px !important;
+  word-wrap: break-word !important;
+
 }
 
 .h1, .h2, .h4, .h5, .h6, h1, h2, h4, h5, h6{
@@ -37,7 +54,6 @@ td{
 a{
   font-family: Poppins-Medium !important;
 }
-
 
 
 .square{

@@ -6,9 +6,13 @@
 </head>
 
 <h1><b>Dogs List<b></h1>
-<button type="button" class="btn btn-primary"><%= link_to 'New Dog', new_dog_path %></button>
+
+
+
+
 
 <div class = "container">
+<%= button_to 'New Dog', new_dog_path, class: "btn btn-primary"%>
 <table class="table table-hover">
   <thead>
     <tr>

@@ -157,4 +157,12 @@ ol li{
 #leaderTitle{
   text-align: center;
 }
+
+.hr {
+    display:block;
+    width:100%; /*or whatever width you want the effect of <hr>*/
+    border-top: 1px solid #070707;
+    margin-top:3%;
+    float:left;
+}
  

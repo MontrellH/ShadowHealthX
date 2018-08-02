@@ -1,4 +1,6 @@
-<h3>Dog</h3>
+
+
+
 
 <p>
   <strong>Name:</strong>
@@ -27,26 +29,24 @@
 
 <p>
   <strong>Shelter:</strong>
-  
+  <a href="../../shelters/<%=@shelter.id%>"><%= @shelter.name %></a>
 </p>
 
 <div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
-    <!-- Wrapper for slides -->
     <div class="carousel-inner">
     <% @dog.avatars.each do |avatar| %>
-    <div class="item">
-     <%= link_to(image_tag(avatar.url, alt: 'Image', class: "resize_me"), avatar.url, target: '_blank') %>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
+      <div class="item">
+        <%= link_to(image_tag(avatar.url, alt: 'Image', class: "resize_me"), avatar.url, target: '_blank') %>
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
     <% end %>
 </div>
+
 <script type="text/javascript">
     $(function(){
     $('.carousel').carousel();

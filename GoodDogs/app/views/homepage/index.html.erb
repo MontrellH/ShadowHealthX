@@ -65,7 +65,7 @@
           <% count += 1%>
           <% if count < 10%>
             <li>
-              <p class="leaderb_list_text"><a href=# class="leaderb_list_item"><%= dog.name%></a></p><p class="leaderb_list_text" id="dog_1"><%=dog.points%></p></li>
+              <p class="leaderb_list_text"><a href="../dogs/<%= dog.id%>" class="leaderb_list_item"><%= dog.name%></a></p><p class="leaderb_list_text" id="dog_1"><%=dog.points%></p></li>
           <% else %>
             <% return %>
           <%end%>

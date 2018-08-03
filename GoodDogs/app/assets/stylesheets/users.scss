@@ -37,8 +37,7 @@
   }
 }
 
-
-.not-root
+.home
 {
   background: {
     image: asset-url("loginbackgnd6.jpg");
@@ -47,6 +46,21 @@
     position: center;
     repeat: no-repeat;
   }
+}
+
+.shelterbg
+{
+  background: {
+    image: asset-url("loginbackgnd11.jpg");
+    size: cover;
+    attachment: fixed;
+    position: center;
+    repeat: no-repeat;
+  }
+}
+
+.not-root {
+    background-color:white
 }
 
 .content {

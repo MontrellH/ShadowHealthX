@@ -2,12 +2,13 @@ class SheltersController < ApplicationController
   before_action :authenticate_user!, except: [:new, :show, :index, :create]
   before_action :set_shelter, except: [:create, :new, :index]
   before_action :authorize!, except: [:new, :create, :show, :index]
-
   def index
+    set_shelter_bg
     @shelters = Shelter.all
   end
 
   def new
+    set_shelter_bg
     @shelter = Shelter.new
   end
 
@@ -20,6 +21,7 @@ class SheltersController < ApplicationController
   end
 
   def create
+    set_shelter_bg
     @shelter = Shelter.new(shelter_params)
       if @shelter.save!
         redirect_to shelters_path
@@ -29,6 +31,7 @@ class SheltersController < ApplicationController
   end
 
   def update
+    set_shelter_bg
     if @shelter.update(shelter_params)
       redirect_to @shelter
     else
@@ -37,11 +40,13 @@ class SheltersController < ApplicationController
   end
 
    def show
+    set_shelter_bg
      @shelter = Shelter.find(params[:id])
      @dogs = @shelter.dogs
    end
    
   def destroy
+    set_shelter_bg
     @shelter.destroy
     redirect_to shelters_path
   end
@@ -59,6 +64,10 @@ class SheltersController < ApplicationController
 
   def shelter_params
        params.require(:shelter).permit(:id, :name, :address, :city, :lat, :lng)
+  end
+
+  def set_shelter_bg
+    @shelterbg = true
   end
 
 end

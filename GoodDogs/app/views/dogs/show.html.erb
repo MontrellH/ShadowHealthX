@@ -28,8 +28,10 @@
 </p>
 
 <p>
+  <%if @shelter != nil%>
   <strong>Shelter:</strong>
   <a href="../../shelters/<%=@shelter.id%>"><%= @shelter.name %></a>
+  <%end%>
 </p>
 
 <div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">

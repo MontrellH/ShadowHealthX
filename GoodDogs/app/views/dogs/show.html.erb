@@ -68,4 +68,52 @@
 
 
 
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @dog.breed %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @dog.age %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dog.description %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @dog.points %>
+</p>
+
+<p>
+  <%if @shelter != nil%>
+  <strong>Shelter:</strong>
+  <a href="../../shelters/<%=@shelter.id%>"><%= @shelter.name %></a>
+  <%end%>
+</p>
+
+<div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
+    <div class="carousel-inner">
+    <% @dog.avatars.each do |avatar| %>
+      <div class="item">
+        <%= link_to(image_tag(avatar.url, alt: 'Image', class: "resize_me"), avatar.url, target: '_blank') %>
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    <% end %>
+</div>
+
+
 

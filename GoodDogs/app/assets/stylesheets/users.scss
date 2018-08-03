@@ -48,6 +48,17 @@
   }
 }
 
+.dogbg
+{
+  background: {
+    image: asset-url("dog.jpg");
+    size: cover;
+    attachment: fixed;
+    position: center;
+    repeat: no-repeat;
+  }
+}
+
 .shelterbg
 {
   background: {
@@ -58,6 +69,8 @@
     repeat: no-repeat;
   }
 }
+
+
 
 .not-root {
     background-color:white
@@ -385,19 +398,19 @@ input:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(120, 119, 119,0.1); 
+    background: rgba(120, 119, 119,0.1);
     border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #FFFFFF; 
+    background: #FFFFFF;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 .signup-form-select, .signup-form-select-container select {
@@ -433,13 +446,3 @@ input:focus {
  .sh-form {
      display: none;
  }
- 
-
-
- 
-
-
-
-
-
-

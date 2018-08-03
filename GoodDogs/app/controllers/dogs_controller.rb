@@ -4,14 +4,17 @@ class DogsController < ApplicationController
   before_action :authorize!, except: [:new, :create, :show, :index]
 
   def index
+    set_dog_bg
     @dogs = Dog.all
   end
 
   def new
+    set_dog_bg
     @dog = Dog.new
   end
 
   def show
+    set_dog_bg
     set_dog
     user_id = @dog.user_id
     @user = User.find_by_id(user_id)
@@ -23,11 +26,11 @@ class DogsController < ApplicationController
   end
 
   def edit
-
+    set_dog_bg
   end
 
   def create
-
+      set_dog_bg
       @dog = Dog.new(dog_params)
       @dog.user = current_user
       if @dog.save!
@@ -38,6 +41,7 @@ class DogsController < ApplicationController
   end
 
   def update
+    set_dog_bg
     if @dog.update(dog_params)
       redirect_to @dog
     else
@@ -46,6 +50,7 @@ class DogsController < ApplicationController
   end
 
   def destroy
+    set_dog_bg
     @dog.destroy
     redirect_to dogs_path
   end
@@ -63,6 +68,10 @@ class DogsController < ApplicationController
 
   def dog_params
         params.require(:dog).permit(:name, :breed, :description, :age, :avatar, {avatars: []},:remove_avatars)
+  end
+
+  def set_dog_bg
+    @dogbg = true
   end
 
 end

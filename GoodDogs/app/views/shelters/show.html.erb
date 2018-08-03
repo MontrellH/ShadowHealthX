@@ -2,7 +2,11 @@
 <h3><%= @shelter.name %> </h3>
 <h1> Map of the shelter </h1>
 <div id='map' data-shelters="<%= @shelter.to_json%>"></div>
-
+</script>
+<h1> Dog names: </h1> 
+<% @dogs.each do |dog|%>
+    <h3><%= dog.name %></h3>
+<% end %>
 <h1> Dogs: </h1>
     <div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
         <!-- Wrapper for slides -->
@@ -35,7 +39,6 @@
         });
     </script>
 </div>
-
 <div id="paypal-button"></div>
 <script>
 paypal.Button.render({
@@ -51,6 +54,8 @@ paypal.Button.render({
       size: 'medium',
       color: 'gold',
       shape: 'pill',
+      label: 'pay',
+      tagline :false
     },
     // Set up a payment
     payment: function (data, actions) {

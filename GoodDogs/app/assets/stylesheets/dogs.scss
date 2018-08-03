@@ -121,17 +121,24 @@ label{
   display: block;
   font-family: 'Poppins-Medium';
   font-size: 23px;
-  color: #F90808;
+  color: #FCAB10;
   line-height: 1.2;
 }
 
 .dog-right-desc {
   font-size:18px;
   font-family: 'Poppins-Regular';
+  color: #FFFFFF;
+  
 }
 
 .fit_the_page {
   width : 100%;
   height : 100%
+}
+
+.box-right {
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 25px;
 }
 

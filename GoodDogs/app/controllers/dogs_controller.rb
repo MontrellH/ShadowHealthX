@@ -15,8 +15,11 @@ class DogsController < ApplicationController
     set_dog
     user_id = @dog.user_id
     @user = User.find_by_id(user_id)
-    shelter_id = @user.shelter_id
-    @shelter = Shelter.find_by_id(shelter_id)
+    if(@user.shelter_id != nil)
+      shelter_id = @user.shelter_id
+      @shelter = Shelter.find_by_id(shelter_id)
+    else
+    end
   end
 
   def edit

@@ -3,7 +3,7 @@
 <h1> Map of the shelter </h1>
 <div id='map' data-shelters="<%= @shelter.to_json%>"></div>
 </script>
-<h1> Dog names: </h1> 
+<h1> Dog names: </h1>
 <% @dogs.each do |dog|%>
     <h3><%= dog.name %></h3>
 <% end %>
@@ -14,7 +14,10 @@
           <% @dogs.each do |dog| %>
             <% avatar = dog.avatars[0]%>
             <div class="item">
+              <% if avatar != nil %>
               <%= link_to(image_tag(avatar.url, alt: 'Image'), avatar.url, target: '_blank') %>
+              <%else%>
+              <%end%>
               <div class="carousel-caption">
                 <h3><%= link_to dog.name, dog_path(dog) %></h3>
               </div>

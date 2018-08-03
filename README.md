@@ -1,2 +1,2 @@
 # ShadowHealthX
-#This is extra text
+Welcome to our website GoodDogs.com!

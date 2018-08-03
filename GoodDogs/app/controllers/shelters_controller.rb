@@ -17,7 +17,7 @@ class SheltersController < ApplicationController
   end
 
   def edit
-
+    set_shelter_bg
   end
 
   def create
@@ -44,7 +44,7 @@ class SheltersController < ApplicationController
      @shelter = Shelter.find(params[:id])
      @dogs = @shelter.dogs
    end
-   
+
   def destroy
     set_shelter_bg
     @shelter.destroy

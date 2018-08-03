@@ -5,7 +5,7 @@
 #map {
   height: 500px;
   width: 75%;
-  margin-left : 15%
+  margin-left : 190px;
 }
 
 #shelterTitle{
@@ -49,12 +49,20 @@ td{
 
 .h3, h3{
   font-family: Poppins-SemiBold !important;
+  text-align: center;
 }
 
 a{
   font-family: Poppins-Medium !important;
 }
 
+h1{
+  color:white;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+  margin: auto !important;
+}
 
 .square{
   display: block;
@@ -70,6 +78,6 @@ a{
 
 .table.table-hover{
   font-size: 1.5em;
-  background-color: rgba(0, 0, 0, .75);
+  background-color: rgba(0, 0, 0, .4);
   border-radius: 30px;
 }

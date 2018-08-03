@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
   </head>
-  <body class = "<%= @root ? 'root': @home ? 'home' : @shelterbg ? 'shelterbg' : 'not-root' %>">
+  <body class = "<%= @root ? 'root': @home ? 'home' : @shelterbg ? 'shelterbg' : @dogbg ? 'dogbg' : 'not-root' %>">
     <%= render "layouts/header" unless @skip_header %>
     <%= yield %>
     <%= render "layouts/footer" unless @skip_footer %>

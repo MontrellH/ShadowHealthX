@@ -1,11 +1,13 @@
+<body>
+<div class="flex_container">
 <h1> Name of Shelter </h1>
-<h3><%= @shelter.name %> </h3>
+<h3 id="shelt_name"><%= @shelter.name %> </h3>
 <h1> Map of the shelter </h1>
-<div id='map' data-shelters="<%= @shelter.to_json%>"></div>
+<div id='map' data-shelters="<%= @shelter.to_json%>" class="rounded_map"></div>
 </script>
 <h1> Dog names: </h1>
 <% @dogs.each do |dog|%>
-    <h3><%= dog.name %></h3>
+    <h3><li><%= dog.name %></li></h3>
 <% end %>
 <h1> Dogs: </h1>
     <div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
@@ -15,7 +17,7 @@
             <% avatar = dog.avatars[0]%>
             <div class="item">
               <% if avatar != nil %>
-              <%= link_to(image_tag(avatar.url, alt: 'Image'), avatar.url, target: '_blank') %>
+              <%= link_to(image_tag(avatar.url, alt: 'Image', class: "resize_me"), avatar.url, target: '_blank') %>
               <%else%>
               <%end%>
               <div class="carousel-caption">
@@ -31,6 +33,8 @@
           <%end%>
         </div>
 
+      </div>
+
           <!-- Controls -->
 
 
@@ -41,8 +45,9 @@
         $('.item:first').addClass('active');
         });
     </script>
-</div>
+
 <div id="paypal-button"></div>
+</div>
 <script>
 paypal.Button.render({
     // Configure environment
@@ -81,3 +86,30 @@ paypal.Button.render({
     }
   }, '#paypal-button');
   </script>
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 29.6436325, lng: -82.3549302},
+        zoom: 13
+      });
+    }
+
+    $(document).ready(
+      function(){
+        var shelters = $("#map").data("shelters");
+        console.log(shelters);
+
+
+        var shelter = shelters;
+        var position = { lat: parseFloat(shelter.lat), lng: parseFloat(shelter.lng)} ;
+          //console.log(shelter);
+
+        var marker = new google.maps.Marker({title: shelter.name, position: position, map: map});
+
+
+        
+      }
+    );
+  </script>
+</body>

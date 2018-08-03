@@ -79,3 +79,33 @@ h1{
   margin-left: 41%;
   margin-right: auto;
 }
+
+.divider{
+  display: block;
+  margin: 40px 0px;
+}
+
+
+.left_hand_side{
+  display: inline;
+  margin-left: 15%;
+  width: 45%;
+  //border-style: dashed;
+  //border: solid 10px black;
+}
+
+
+.right_hand_side{
+  display: inline;
+  float: right;
+  margin-right: 1%;
+  margin-left: 3%;
+  width: 45%;
+  max-width: 600px;
+  position: fixed;
+}
+
+.right_hand_side p strong {
+  font-size:20px;
+}
+

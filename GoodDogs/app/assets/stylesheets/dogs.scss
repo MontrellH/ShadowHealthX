@@ -36,6 +36,25 @@ hr {
   margin-bottom: 25px;
 }
 
+h3{
+  text-align: center;
+}
+
+#shelt_name{
+  text-align: center !important;
+}
+
+#paypal-button{
+  text-align: center;
+}
+
+.flex_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .25)
+}
+
 .resize_me{
   width: 400px !important;
   height: 400px !important;
@@ -43,6 +62,10 @@ hr {
 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img{
   margin: auto !important;
+}
+
+.rounded_map{
+  border-radius: 30px;
 }
 
 ::placeholder{
@@ -78,31 +101,37 @@ label{
   margin-right: auto;
 }
 
-.divider{
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  clear: both;
+  display: table;
+}
+
+.dog-right-label {
   display: block;
-  margin: 40px 0px;
+  font-family: 'Poppins-Medium';
+  font-size: 23px;
+  color: #F90808;
+  line-height: 1.2;
 }
 
-
-.left_hand_side{
-  display: inline;
-  margin-left: 15%;
-  width: 45%;
-  //border-style: dashed;
-  //border: solid 10px black;
+.dog-right-desc {
+  font-size:18px;
+  font-family: 'Poppins-Regular';
 }
 
-
-.right_hand_side{
-  display: inline;
-  float: right;
-  margin-right: 1%;
-  margin-left: 3%;
-  width: 45%;
-  max-width: 600px;
-  position: fixed;
+.fit_the_page {
+  width : 100%;
+  height : 100%
 }
 
-.right_hand_side p strong {
-  font-size:20px;
-}

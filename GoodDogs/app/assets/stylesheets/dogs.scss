@@ -8,18 +8,26 @@ td, th {
 /* Full-width input fields */
 input[type=text], input[type=string], input[type=integer], textarea {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
+  font-family: 'Poppins-Medium';
+  font-size: 16px;
+  color: #F9F9F9;
+  line-height: 1.2;
   border: none;
-  background: #f1f1f1;
-  color: black;
+  border-bottom: 1px solid #FFFFFF;
+  display: block;
+  height: 55px;
+  background: transparent;
+
 }
 
 input[type=text]:focus, input[type=string]:focus, input[type=integer]:focus, textarea:focus  {
-  background-color: #ddd;
+  background-color: rgba(221, 221, 221, 0.4);
   outline: none;
-  color:black;
+  color:black !important;
+}
+
+textarea{
+  color:white !important;
 }
 
 /* Overwrite default styles of hr */
@@ -29,8 +37,12 @@ hr {
 }
 
 .resize_me{
-  width: 200px;
-  height: 200px;
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+  margin: auto !important;
 }
 
 ::placeholder{
@@ -44,7 +56,16 @@ a{
 
 h1{
   align-content: center;
-    text-align: center
+    text-align: center;
+    color: white;
+}
+
+h1 b{
+  color: white;
+}
+
+label{
+     color: white !important; // some color
 }
 
 .btn-primary{
@@ -85,4 +106,3 @@ h1{
 .right_hand_side p strong {
   font-size:20px;
 }
-

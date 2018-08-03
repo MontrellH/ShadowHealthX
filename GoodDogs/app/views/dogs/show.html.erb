@@ -7,7 +7,7 @@
             <% avatar = @dog.avatars[0] %>
             <%= link_to(image_tag(avatar.url, alt: 'Image', class: "fit_the_page"), avatar.url, target: '_blank') %>></img>
           </div>
-          <div class="box">
+          <div class="box box-right">
             <p>
               <span class="dog-right-label">Name:</span>
               <span class="dog-right-desc"><%= @dog.name %></span>

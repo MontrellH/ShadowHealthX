@@ -37,23 +37,36 @@ th{
 td{
   color: white;
   font-family: Poppins-Regular;
-  border-radius: 30px;
   padding-left: 12px !important;
   word-wrap: break-word !important;
 
 }
 
+// td:hover{
+//   background-color: rgba(0, 0, 0, .4);
+// }
+
+tr:hover{
+  background-color: rgba(0, 0, 0, .4)!important;
+}
+
+
+
+
 .h1, .h2, .h4, .h5, .h6, h1, h2, h4, h5, h6{
   font-family: Poppins-Bold !important;
+  color: white!important
 }
 
 .h3, h3{
   font-family: Poppins-SemiBold !important;
   text-align: center;
+  color: white!important
 }
 
 a{
   font-family: Poppins-Medium !important;
+  color: white  !important;
 }
 
 h1{
@@ -81,3 +94,8 @@ h1{
   background-color: rgba(0, 0, 0, .4);
   border-radius: 30px;
 }
+
+#paypal-button {
+  margin-top : 3%
+}
+

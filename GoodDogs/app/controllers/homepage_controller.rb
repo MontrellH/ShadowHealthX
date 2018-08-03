@@ -3,6 +3,7 @@ class HomepageController < ApplicationController
     @user = current_user
     @dogs = Dog.by_points
     @vote = Vote.where("user_id = ?", current_user )
+    @home = true
   end
 
   def button
